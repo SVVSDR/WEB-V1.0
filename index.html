@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple Header</title>
+<link rel="icon" href="https://svvsdr.github.io/SVVDS-IMG/7-FEVICON-AND-MAIN-LOGO-ICON.png" type="image/png">
+<link rel="apple-touch-icon" href="https://svvsdr.github.io/SVVDS-IMG/7-FEVICON-AND-MAIN-LOGO-ICON.png">
+
+<!-- CM001 - External Fonts and Resources -->
+<link href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;800&family=Ponnala&family=Roboto+Slab:wght@400;600&family=Potti+Sreeramulu&family=Ramaraja&family=Timmana&family=Ravi+Prakash&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* CM002 - Global CSS Variables and Body Styles */
+:root{--primary-gold:#FFC800;--gold-light:#FFF8DC;--gold-dark:#B8860B;--top-bar-bg:#2A0000;--temple-maroon:#3D0000;--temple-dark-red:#580000;--text-light:#FFF8EE;--stroke-color:#000000;--bg-sec3:#E8F5E9;--bg-sec4:#FFFDE7;--bg-sec5:#FFF3E0;--bg-sec6:#F3E5F5;--bg-sec7:#E0F7FA;--bg-sec8:#F5F5F5;--footer-bg:#1A0000;}
+body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflow-x:hidden;scroll-behavior:smooth;margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box;}
+
+/* CM003 - Top Bar Navigation Styles */
+.top-bar{background-color:var(--top-bar-bg);color:var(--text-light);padding:5px 3%;display:flex;justify-content:space-between;align-items:center;font-family:'Roboto Slab',serif;font-size:0.8rem;border-bottom:2px solid var(--primary-gold);}
+.top-bar a{color:var(--text-light);text-decoration:none;}
+.top-bar i{color:var(--primary-gold);margin-right:6px;}
+.top-left,.top-center,.top-right{display:flex;align-items:center;gap:12px;}
+.top-left{cursor:pointer;user-select:none;transition:transform 0.2s ease,color 0.2s ease;}
+.top-left:hover{color:var(--primary-gold);transform:scale(1.03);}
+@media (max-width:1150px){.top-bar{flex-direction:column;gap:6px;text-align:center;}.top-left,.top-center,.top-right{justify-content:center;flex-wrap:wrap;}}
+
+/* CM004 - Header Main Background */
+.header{position:relative;width:100%;padding:0.4rem 1.5%;background:radial-gradient(circle at center, #5B0000 0%, #3B0000 60%, #200000 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 6px 12px rgba(0,0,0,0.8);border-bottom:4px solid var(--primary-gold);}
+
+/* CM005 - Header Flower Animation */
+.flower-bg{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50,20 Q60,5 70,20 Q85,10 80,25 Q95,35 80,45 Q95,60 80,65 Q85,80 70,70 Q60,85 50,70 Q40,85 30,70 Q15,80 20,65 Q5,60 20,45 Q5,35 20,25 Q15,10 30,20 Q40,5 50,20 Z' fill='%23FFC800' opacity='0.25'/%3E%3C/svg%3E");animation:bloomAndScroll 25s ease-in-out infinite alternate;}
+@keyframes bloomAndScroll{0%{background-position:0 0;background-size:50px 50px;opacity:0.04;}50%{background-size:75px 75px;opacity:0.12;}100%{background-position:250px 125px;background-size:50px 50px;opacity:0.04;}}
+
+/* CM006 - Header Content Layout */
+.header-content{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1400px;margin:0 auto;gap:0.8rem;}
+.deity-group-left{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.header-img-box{position:relative;width:62px;height:130px;flex-shrink:0;border-radius:6px;border:1px solid var(--primary-gold);overflow:hidden;box-shadow:0 6px 14px rgba(0,0,0,0.9),0 0 8px rgba(0,0,0,0.6);background:#000;}
+.header-img-box img{width:100%;height:100%;object-fit:cover;display:block;}
+.header-img-box-right{position:relative;width:75px;height:130px;flex-shrink:0;border-radius:6px;border:1px solid var(--primary-gold);overflow:hidden;box-shadow:0 6px 14px rgba(0,0,0,0.9),0 0 8px rgba(0,0,0,0.6);background:#000;}
+.header-img-box-right img{width:100%;height:100%;object-fit:cover;display:block;}
+.header-text-center{flex:1;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;}
+.title-group-left{transform:translateX(-20px);transition:transform 0.3s ease;}
+.title-group-right{transform:translateX(20px);transition:transform 0.3s ease;}
+@media (max-width:1150px){.header-content{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:10px;padding:0.4rem 0;}.deity-group-left{order:1;}.header-img-box-right{order:2;}.header-text-center{order:3;width:100%;flex:1 1 100%;margin-top:4px;}.title-group-left,.title-group-right{transform:translateX(0);}.header-img-box{width:48px;height:90px;}.header-img-box-right{width:52px;height:90px;}}
+
+/* CM007 - Header Text Styling */
+.gold-scroll-title{font-family:'Ponnala',sans-serif;font-size:clamp(1.05rem,1.7vw,1.55rem);font-weight:400;line-height:1.2;letter-spacing:0.4px;color:#FFC800;text-shadow:0 0 8px rgba(255,255,255,0.85), 0 0 12px rgba(255,255,255,0.5), 2px 3px 5px #000000;text-align:center;}
+.eng-title{font-family:'Roboto Slab',serif;font-size:clamp(0.7rem,0.95vw,0.9rem);font-weight:600;color:#FFFFFF;letter-spacing:0.8px;margin-bottom:2px;text-shadow:0 0 6px rgba(255,255,255,0.7), 2px 2px 4px rgba(0,0,0,0.9);}
+.gold-sub{font-family:'Ponnala',sans-serif;font-size:clamp(0.8rem,1.0vw,1.05rem);color:#FFC800;margin:1px 0;text-shadow:0 0 6px rgba(255,255,255,0.8), 2px 2px 4px rgba(0,0,0,0.9);}
+.gold-sub .eng-text{font-family:'Roboto Slab',serif;font-size:0.85em;margin-left:4px;color:#FFFFFF;text-shadow:0 0 6px rgba(255,255,255,0.7), 2px 2px 4px rgba(0,0,0,0.9);}
+.temple-address{font-family:'Ponnala',sans-serif;font-size:clamp(0.78rem,0.95vw,0.95rem);font-weight:400;color:#FFC800;margin-top:3px;line-height:1.3;letter-spacing:0.4px;max-width:850px;text-shadow:0 0 6px rgba(255,255,255,0.8), 2px 2px 4px #000000;}
+
+/* CM008 - History Section */
+.history-sec{width:100%;max-width:1200px;margin:5px auto;padding:5px 3%;display:flex;flex-direction:column;gap:5px;background-color:#ffffff;}
+.hist-top,.hist-bot{font-family:'Ravi Prakash',cursive;font-size:1.3rem;color:var(--temple-maroon);text-align:justify;line-height:1.1;letter-spacing:0.5px;}
+.hist-mid{display:flex;align-items:center;justify-content:center;gap:15px;width:100%;}
+.hist-left,.hist-right{flex:1;font-family:'Ravi Prakash',cursive;font-size:1.3rem;color:var(--temple-maroon);text-align:justify;line-height:1.1;letter-spacing:0.5px;}
+.hist-logo-box{width:120px;height:120px;flex-shrink:0;border-radius:50%;border:3px solid var(--primary-gold);box-shadow:0 4px 10px rgba(0,0,0,0.4);overflow:hidden;}
+.hist-logo-box img{width:100%;height:100%;object-fit:cover;display:block;}
+@media (max-width:800px){.hist-mid{flex-direction:column;gap:10px;}.hist-left,.hist-right{width:100%;}.hist-logo-box{width:90px;height:90px;}}
+.read-more-box{display:flex;justify-content:flex-end;width:100%;margin-top:2px;}
+.read-more-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:var(--text-light);font-family:'Roboto Slab',serif;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:20px;border:1px solid var(--primary-gold);box-shadow:0 3px 6px rgba(0,0,0,0.3);transition:all 0.3s ease;}
+.read-more-btn:hover{transform:translateY(-2px);box-shadow:0 5px 10px rgba(0,0,0,0.5);color:var(--primary-gold);}
+
+/* CM009 - Scrolling Ticker */
+.scroll-ticker-wrap{width:100%;background:var(--temple-maroon);color:var(--primary-gold);padding:2px 0;border-top:1px solid var(--primary-gold);border-bottom:1px solid var(--primary-gold);overflow:hidden;position:relative;display:flex;align-items:center;}
+.scroll-ticker-text{font-family:'Timmana',serif;font-size:1rem;white-space:nowrap;animation:scrollLeft 35s linear infinite;display:inline-block;padding-left:100%;letter-spacing:0.5px;}
+@keyframes scrollLeft{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+
+/* CM010 - Timings and Updates Section */
+.sec-three-wrap{width:100%;background-color:var(--bg-sec3);padding:15px 0;}
+.sec-three{width:98%;max-width:100%;margin:0 auto;padding:0 1%;display:flex;gap:20px;align-items:stretch;justify-content:space-between;}
+@media (max-width:900px){.sec-three{flex-direction:column;gap:15px;}}
+.info-card{flex:1;background:var(--text-light);border:2px solid var(--primary-gold);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.2);overflow:hidden;min-width:300px;}
+.info-card-hdr{background:var(--temple-maroon);color:var(--text-light);padding:5px;font-family:'Roboto Slab',serif;font-size:0.9rem;font-weight:600;text-align:center;border-bottom:2px solid var(--primary-gold);}
+.info-card-body{padding:8px;font-family:'Roboto Slab',serif;color:var(--temple-maroon);display:flex;flex-direction:column;gap:8px;}
+.time-blk{border-bottom:1px dashed #ccc;padding-bottom:5px;}
+.time-blk:last-child{border-bottom:none;padding-bottom:0;}
+.time-title{font-size:0.85rem;font-weight:bold;margin-bottom:4px;display:flex;align-items:center;gap:5px;color:var(--temple-dark-red);}
+.time-title i{color:var(--primary-gold);}
+.time-slot{display:flex;justify-content:space-between;font-size:0.75rem;margin-bottom:2px;font-family:'Roboto Slab',serif;}
+.time-slot span:last-child{font-weight:600;color:#000;}
+.update-list{list-style:none;max-height:150px;overflow-y:auto;padding-right:5px;}
+.update-list::-webkit-scrollbar{width:6px;}
+.update-list::-webkit-scrollbar-thumb{background:var(--primary-gold);border-radius:6px;}
+.update-list::-webkit-scrollbar-track{background:#f1f1f1;}
+.update-item{background:#f9f0e5;border-left:4px solid var(--primary-gold);padding:6px;margin-bottom:6px;border-radius:4px;font-size:0.75rem;}
+.update-item.completed{border-left-color:#888;opacity:0.75;background:#f0f0f0;}
+.update-date{font-weight:bold;color:var(--temple-maroon);margin-bottom:2px;font-family:'Roboto Slab',serif;font-size:0.75rem;}
+.update-desc{color:#333;line-height:1.2;font-family:'Ponnala',sans-serif;}
+.sec-three-img-box{flex:0 0 250px;display:flex;justify-content:center;align-items:center;padding:5px;}
+.sec-three-img-box img{width:100%;height:100%;max-height:220px;border-radius:12px;border:3px solid var(--primary-gold);box-shadow:0 6px 15px rgba(0,0,0,0.4);object-fit:cover;}
+@media (max-width:900px){.sec-three-img-box{flex:1 1 100%;order:-1;}}
+
+/* CM011 - Committee and Priests Section */
+.sec-four-wrap{width:100%;background-color:var(--bg-sec4);padding:15px 0;}
+.stylish-divider{width:80%;max-width:1000px;height:2px;background:linear-gradient(90deg,transparent,var(--primary-gold),transparent);margin:10px auto;}
+.sec-four{width:100%;max-width:1200px;margin:0 auto;padding:0 3%;display:flex;gap:15px;align-items:stretch;}
+.sec-four-col{background:transparent;display:flex;flex-direction:column;}
+.sec-four-left{flex:2;border-right:2px solid rgba(255,200,0,0.6);padding-right:15px;}
+.sec-four-right{flex:1;padding-left:5px;}
+.profile-grid{padding:5px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:15px;justify-items:center;align-items:start;flex:1;}
+.profile-card{text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;width:100%;}
+.profile-img{width:60px;height:60px;border-radius:50%;border:2px solid var(--primary-gold);object-fit:cover;box-shadow:0 3px 6px rgba(0,0,0,0.3);}
+.profile-name{font-family:'Chathura',sans-serif;font-size:0.95rem;font-weight:800;color:var(--temple-maroon);line-height:0.9;margin-top:2px;}
+.profile-role{font-family:'Chathura',sans-serif;font-size:0.95rem;font-weight:800;color:#555;line-height:0.9;margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;text-align:center;}
+.profile-phone{font-family:'Roboto Slab',serif;font-size:0.75rem;color:var(--top-bar-bg);font-weight:600;margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;}
+.profile-role i{color:var(--primary-gold);font-size:0.8rem;}
+.profile-phone i{color:var(--temple-maroon);}
+@media (max-width:850px){.sec-four{flex-direction:column;}.sec-four-left,.sec-four-right{width:100%;padding:0;border:none;}.sec-four-left{border-bottom:2px solid rgba(255,200,0,0.6);padding-bottom:15px;margin-bottom:10px;}.profile-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* CM012 - Annadanam Section */
+.sec-five-wrap{width:100%;background-color:var(--bg-sec5);padding:15px 0;}
+.sec-five{width:100%;max-width:1400px;margin:0 auto;padding:0 2%;display:flex;flex-direction:column;gap:15px;}
+.anna-text-box{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;}
+.anna-text{width:100%;font-family:'Ramaraja',serif;font-size:1.1rem;color:var(--temple-maroon);text-align:justify;line-height:1.2;margin:0;padding:0;}
+.btn-small-book{background:linear-gradient(135deg,#006400,#004d00);color:#fff;padding:8px 20px;border-radius:20px;font-family:'Roboto Slab',serif;font-size:0.9rem;font-weight:bold;text-decoration:none;border:1px solid var(--primary-gold);box-shadow:0 3px 6px rgba(0,0,0,0.3);white-space:nowrap;transition:transform 0.2s;display:inline-block;}
+.btn-small-book:hover{transform:scale(1.05);}
+.anna-grid{display:flex;gap:30px;justify-content:center;width:100%;margin:0;}
+@media (max-width:850px){.anna-grid{flex-direction:column;gap:15px;}}
+.anna-card{flex:1;background:#fff;border:2px solid var(--primary-gold);border-radius:8px;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;flex-direction:column;gap:0;}
+.anna-title{font-family:'Ramaraja',serif;font-size:1.5rem;color:var(--temple-maroon);text-align:center;font-weight:bold;margin:0;padding:0;}
+.anna-cost{font-family:'Ramaraja',serif;font-size:1.2rem;color:#b8860b;text-align:center;margin-bottom:6px;font-weight:bold;border-bottom:1px dashed #ccc;padding-bottom:4px;}
+.cal-list{list-style:none;display:flex;flex-direction:column;gap:0;margin:0;padding:0;}
+.cal-item{display:flex;justify-content:space-between;align-items:center;padding:5px 8px;font-family:'Roboto Slab',serif;font-size:0.8rem;font-weight:bold;border-bottom:1px solid #eee;}
+.cal-item:last-child{border-bottom:none;}
+.status-completed{color:#d32f2f;background:#fff5f5;}
+.status-waiting{color:#e65100;background:#fff8f0;}
+.status-booked{color:#1565c0;background:#f0f8ff;}
+.status-icon{margin-right:5px;}
+
+/* CM013 - Donor Section Layout */
+.donor-wrapper{position:relative;margin-top:10px;padding:10px;display:flex;flex-direction:column;align-items:center;width:100%;}
+.donor-content-box{position:relative;z-index:2;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center;}
+.donor-bless-top{font-family:'Ramaraja',serif;font-size:1.4rem;color:var(--temple-maroon);font-weight:bold;text-align:center;margin-bottom:12px;text-shadow:1px 1px 2px rgba(0,0,0,0.1);line-height:1.3;}
+.donor-split-new{display:flex;align-items:center;justify-content:center;gap:15px;width:100%;flex-wrap:wrap;}
+.donor-half-new{flex:1;min-width:280px;background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(255,248,220,0.9));border:2px solid var(--primary-gold);padding:15px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.15);text-align:center;position:relative;overflow:hidden;}
+.donor-half-new::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--temple-maroon),var(--primary-gold));}
+.donor-center-group{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;z-index:3;margin:0 5px;}
+.donor-date-top{font-family:'Roboto Slab',serif;font-size:0.9rem;font-weight:bold;color:#b8860b;background:#FFF8EE;padding:4px 12px;border-radius:15px;border:1px dashed var(--primary-gold);}
+.donor-center-logo{width:70px;height:70px;border-radius:50%;border:2px solid var(--primary-gold);box-shadow:0 3px 8px rgba(0,0,0,0.3);overflow:hidden;background:#fff;}
+.donor-center-logo img{width:100%;height:100%;object-fit:cover;}
+.donor-day-bot{font-family:'Ponnala',sans-serif;font-size:1.1rem;font-weight:bold;color:var(--temple-maroon);}
+@media (max-width:800px){.donor-split-new{flex-direction:column;}.donor-center-group{margin:10px 0;}}
+.donor-h-title-new{font-family:'Ramaraja',serif;font-size:1.4rem;color:var(--temple-dark-red);font-weight:bold;margin:0 0 8px 0;text-decoration:underline;text-decoration-color:var(--primary-gold);text-underline-offset:3px;}
+.donor-details-new{font-family:'Ramaraja',serif;font-size:1.15rem;color:#333;line-height:1.3;}
+
+/* CM014 - Festivals Section */
+.sec-six-wrap{width:100%;background-color:var(--bg-sec6);padding:20px 0;}
+.sec-six{width:100%;max-width:1200px;margin:0 auto;padding:0 3%;display:flex;flex-direction:column;gap:15px;}
+.sec-title{font-family:'Roboto Slab',serif;font-size:1.4rem;color:var(--temple-maroon);text-align:center;font-weight:bold;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid var(--primary-gold);padding-bottom:5px;}
+.fest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px;}
+.fest-card{background:#fff;border-left:4px solid var(--primary-gold);padding:12px;border-radius:6px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
+.fest-title{font-family:'Ramaraja',serif;font-size:1.4rem;color:var(--temple-dark-red);font-weight:bold;margin-bottom:6px;}
+.fest-desc{font-family:'Ponnala',sans-serif;font-size:1rem;color:#444;line-height:1.4;}
+.fest-sched{margin-top:6px;padding-left:15px;list-style-type:circle;font-family:'Roboto Slab',serif;font-size:0.85rem;color:#222;}
+
+/* CM015 - Donation and Forms Section */
+.sec-seven-wrap{width:100%;background-color:var(--bg-sec7);padding:20px 0;}
+.sec-seven-top-desc{width:100%;max-width:1200px;margin:0 auto 15px;font-family:'Ponnala',sans-serif;font-size:1.1rem;color:var(--temple-maroon);text-align:center;line-height:1.5;background:#fff;padding:15px;border:2px solid var(--primary-gold);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.sec-seven{width:100%;max-width:1200px;margin:0 auto;padding:0 3%;display:flex;gap:20px;align-items:stretch;}
+@media(max-width:850px){.sec-seven{flex-direction:column;}}
+.donate-left,.donate-right{flex:1;background:#fff;border:2px solid var(--primary-gold);border-radius:8px;padding:15px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.qr-box{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;}
+.qr-img{width:200px;height:200px;border:3px solid var(--temple-maroon);border-radius:8px;padding:5px;}
+.pay-modes{font-family:'Roboto Slab',serif;font-size:0.85rem;color:#333;text-align:left;width:100%;margin-top:10px;}
+.pay-modes ul{padding-left:20px;line-height:1.6;}
+.form-group{margin-bottom:12px;display:flex;flex-direction:column;gap:4px;}
+.form-group label{font-family:'Roboto Slab',serif;font-size:0.85rem;font-weight:bold;color:var(--temple-maroon);}
+.form-group input,.form-group select{padding:8px;border:1px solid #ccc;border-radius:4px;font-family:'Roboto Slab',serif;font-size:0.9rem;width:100%;outline:none;}
+.form-group input:focus,.form-group select:focus{border-color:var(--primary-gold);box-shadow:0 0 4px rgba(255,200,0,0.5);}
+.btn-submit{background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:#fff;border:none;padding:10px;border-radius:6px;font-family:'Roboto Slab',serif;font-size:1rem;font-weight:bold;cursor:pointer;width:100%;margin-top:10px;transition:0.3s;}
+.btn-submit:hover{opacity:0.9;}
+.form-note{font-family:'Ponnala',sans-serif;font-size:0.9rem;color:#d32f2f;margin-top:8px;text-align:center;font-weight:bold;}
+
+/* CM016 - Gallery Section */
+.sec-eight-wrap{width:100%;background-color:var(--bg-sec8);padding:20px 0;}
+.sec-eight{width:100%;max-width:1400px;margin:0 auto;padding:0 2%;display:flex;flex-direction:column;gap:20px;}
+.gal-split{display:flex;gap:20px;width:100%;}
+@media(max-width:900px){.gal-split{flex-direction:column;}}
+.gal-col{flex:1;display:flex;flex-direction:column;gap:10px;}
+.gal-col-title{font-family:'Roboto Slab',serif;font-size:1.2rem;font-weight:bold;color:var(--temple-maroon);text-align:center;background:var(--primary-gold);padding:5px;border-radius:4px;}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;}
+.gal-img-new{width:100%;aspect-ratio:1/2;object-fit:cover;border:2px solid var(--primary-gold);border-radius:6px;box-shadow:0 3px 8px rgba(0,0,0,0.2);transition:transform 0.3s;}
+.gal-img-old{width:100%;aspect-ratio:2/1;object-fit:cover;border:2px solid var(--primary-gold);border-radius:6px;box-shadow:0 3px 8px rgba(0,0,0,0.2);transition:transform 0.3s;}
+.gal-img-new:hover,.gal-img-old:hover{transform:scale(1.02);z-index:2;position:relative;}
+
+/* CM017 - Footer Section */
+.footer-wrap{width:100%;background-color:var(--footer-bg);padding:30px 3% 10px;color:var(--text-light);font-family:'Roboto Slab',serif;}
+.footer-content{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;}
+.foot-col{flex:1;min-width:250px;display:flex;flex-direction:column;gap:10px;}
+.foot-title{font-size:1.1rem;font-weight:bold;color:var(--primary-gold);border-bottom:1px solid var(--primary-gold);padding-bottom:5px;margin-bottom:5px;}
+.foot-links a{color:var(--text-light);text-decoration:none;display:block;margin-bottom:6px;font-size:0.9rem;transition:color 0.2s;}
+.foot-links a:hover{color:var(--primary-gold);}
+.foot-map-container{width:100%;height:150px;border:2px solid var(--primary-gold);border-radius:6px;overflow:hidden;}
+.foot-map-container iframe{width:100%;height:100%;border:0;}
+.map-actions{display:flex;justify-content:space-between;margin-top:5px;}
+.map-actions button{background:transparent;border:1px solid var(--primary-gold);color:var(--primary-gold);padding:4px 8px;border-radius:4px;cursor:pointer;font-size:0.75rem;display:flex;align-items:center;gap:4px;transition:0.2s;}
+.map-actions button:hover{background:var(--primary-gold);color:var(--footer-bg);}
+.foot-social{display:flex;gap:15px;margin-top:10px;}
+.foot-social a{color:var(--primary-gold);font-size:1.5rem;transition:transform 0.2s;}
+.foot-social a:hover{transform:scale(1.2);}
+.foot-bottom{text-align:center;padding-top:20px;margin-top:20px;border-top:1px dashed #555;font-size:0.8rem;color:#aaa;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.foot-logo{width:60px;height:60px;border-radius:50%;border:2px solid var(--primary-gold);margin-bottom:10px;}
+.admin-login-btn{background:var(--primary-gold);color:var(--footer-bg);padding:8px 20px;border-radius:20px;font-weight:bold;text-decoration:none;font-size:1rem;display:inline-flex;align-items:center;gap:8px;transition:0.3s;}
+.admin-login-btn:hover{transform:scale(1.05);box-shadow:0 0 10px rgba(255,200,0,0.5);}
+
+/* CM018 - Modal Styles */
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);display:none;justify-content:center;align-items:center;z-index:9999;backdrop-filter:blur(4px);}
+.modal-card{background:#FFF8EE;border:3px solid var(--primary-gold);border-radius:12px;width:90%;max-width:420px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,0.8);text-align:center;font-family:'Roboto Slab',serif;animation:modalPop 0.3s ease-out;}
+@keyframes modalPop{from{transform:scale(0.8);opacity:0;}to{transform:scale(1);opacity:1;}}
+.app-icon{width:80px;height:80px;border-radius:18px;margin:0 auto 12px;border:2px solid var(--primary-gold);box-shadow:0 4px 10px rgba(0,0,0,0.3);display:block;}
+.app-title{font-family:'Ponnala',sans-serif;font-size:1.3rem;font-weight:700;color:var(--top-bar-bg);margin-bottom:4px;}
+.app-sub{font-size:0.85rem;color:#555;margin-bottom:15px;}
+.progress-bar-container{width:100%;height:14px;background:#e0e0e0;border-radius:7px;overflow:hidden;margin:15px 0 8px;display:none;border:1px solid #ccc;}
+.progress-bar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--temple-maroon),var(--primary-gold));transition:width 0.2s linear;}
+.modal-btn-group{display:flex;gap:10px;justify-content:center;margin-top:15px;}
+.modal-btn{padding:8px 20px;border-radius:6px;font-weight:600;cursor:pointer;border:none;font-size:0.9rem;transition:all 0.2s ease;}
+.btn-install{background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:#fff;border:1px solid var(--primary-gold);}
+.btn-install:hover{opacity:0.9;transform:translateY(-1px);}
+.btn-cancel{background:#ccc;color:#333;}
+.btn-cancel:hover{background:#bbb;}
+</style>
+</head>
+<body>
+
+<!-- CM019 - Top Navigation Bar -->
+<div class="top-bar">
+<div class="top-left" onclick="openDownloadModal()"><i class="fas fa-download"></i> Download App</div>
+<div class="top-center"><i class="fas fa-globe"></i> www.svvsd.in</div>
+<div class="top-right">
+<span><i class="fas fa-phone-alt"></i> Contact: 9703 719805</span>
+<span><i class="fas fa-envelope"></i> contact.svvsd@gmail.com</span>
+</div>
+</div>
+
+<!-- CM020 - Main Header Section -->
+<header class="header">
+<div class="flower-bg"></div>
+<div class="header-content">
+<div class="deity-group-left">
+<div class="header-img-box" title="శ్రీ లక్ష్మీదేవి అమ్మవారు"><img id="headImg1" src="" alt="Lakshmi Devi"></div>
+<div class="header-img-box" title="శ్రీ వెంకటేశ్వర స్వామి వారు"><img id="headImg2" src="" alt="Venkateswara Swamy"></div>
+<div class="header-img-box" title="శ్రీ గోదాదేవి అమ్మవారు"><img id="headImg3" src="" alt="Goda Devi"></div>
+</div>
+<div class="header-text-center">
+<div class="title-group-left">
+<div class="gold-scroll-title">శ్రీ లక్ష్మీదేవి గోదాదేవి సమేత వాసాపురం వెంకటేశ్వర స్వామి దేవస్థానం</div>
+<div class="eng-title">SRI LAKSHMI DEVI GODA DEVI SAMETHA VASAPURAM VENKATESWARA SWAMY DEVASTHANAM</div>
+</div>
+<div class="gold-sub">మరియు <span class="eng-text">&amp;</span></div>
+<div class="title-group-right">
+<div class="gold-scroll-title">మహా త్రిపుర సుందరీ దేవి సమేత మానస లింగేశ్వర స్వామి దేవస్థానం</div>
+<div class="eng-title">MAHA TRIPURA SUNDARI DEVI SAMETHA MANASA LINGESWARA SWAMY DEVASTHANAM</div>
+</div>
+<div class="temple-address">నంద్యాల జిల్లా, రుద్రవరం మండలం, కొండమాయపల్లె పంచాయితీ, వెలగలపల్లె గ్రామం పొలిమేర - 518542</div>
+</div>
+<div class="header-img-box-right" title="మానస లింగేశ్వర స్వామి"><img id="headImg4" src="" alt="Shiva Lingam"></div>
+</div>
+</header>
+
+<!-- CM021 - History Section -->
+<div class="history-sec" id="sec-history">
+<div class="hist-top" id="histTopText"></div>
+<div class="hist-mid">
+<div class="hist-left" id="histLeftText"></div>
+<div class="hist-logo-box"><img id="histCenterLogo" src="" alt="Center Temple Logo"></div>
+<div class="hist-right" id="histRightText"></div>
+</div>
+<div class="hist-bot" id="histBotText"></div>
+<div class="read-more-box"><a href="#" class="read-more-btn" id="readMoreBtn">Read More <i class="fas fa-arrow-right"></i></a></div>
+</div>
+
+<!-- CM022 - Scrolling Ticker -->
+<div class="scroll-ticker-wrap">
+<div class="scroll-ticker-text" id="marqueeTextObj"></div>
+</div>
+
+<!-- CM023 - Timings and Updates -->
+<div class="sec-three-wrap">
+<div class="sec-three">
+<div class="info-card">
+<div class="info-card-hdr"><i class="fas fa-clock"></i> Temple Timings</div>
+<div class="info-card-body">
+<div class="time-blk">
+<div class="time-title"><i class="fas fa-sun"></i> Regular Daily Timings</div>
+<div class="time-slot"><span><i class="fas fa-sun"></i> Morning Darshan:</span><span>6:30 AM – 11:30 AM</span></div>
+<div class="time-slot"><span><i class="fas fa-moon"></i> Evening Darshan:</span><span>5:30 PM – 7:30 PM</span></div>
+</div>
+<div class="time-blk">
+<div class="time-title"><i class="fas fa-star"></i> Saturday Special Timings</div>
+<div class="time-slot"><span><i class="fas fa-sun"></i> Saturday Morning Special:</span><span>5:00 AM – 1:30 PM</span></div>
+<div class="time-slot"><span><i class="fas fa-moon"></i> Saturday Evening Special:</span><span>5:00 PM – 8:00 PM</span></div>
+</div>
+</div>
+</div>
+<div class="sec-three-img-box"><img id="secThreeCenterImg" src="" alt="Old Venkateshwara Swamy"></div>
+<div class="info-card">
+<div class="info-card-hdr"><i class="fas fa-bell"></i> Updates & Notifications</div>
+<div class="info-card-body" style="padding:10px 5px 10px 10px;"><ul class="update-list" id="updatesList"></ul></div>
+</div>
+</div>
+</div>
+
+<!-- CM024 - Committee and Priests -->
+<div class="sec-four-wrap">
+<div class="stylish-divider"></div>
+<div class="sec-four">
+<div class="sec-four-col sec-four-left"><div class="profile-grid" id="committeeGrid"></div></div>
+<div class="sec-four-col sec-four-right"><div class="profile-grid" id="priestsGrid"></div></div>
+</div>
+<div class="stylish-divider"></div>
+</div>
+
+<!-- CM025 - Annadanam Section -->
+<div class="sec-five-wrap" id="sec-annadanam">
+<div class="sec-five">
+<div class="anna-text-box">
+<div class="anna-text" id="annaTextObj"></div>
+<a href="#sec-donation" class="btn-small-book">అన్నదానం కొరకు బుక్ చేసుకోండి</a>
+</div>
+<div class="anna-grid">
+<div class="anna-card">
+<div class="anna-title"><i class="fas fa-leaf"></i> ఉదయం అల్పాహారం (Breakfast)</div>
+<div class="anna-cost">విరాళం: ₹30,000 (లేదా ఇద్దరు దాతలు ₹15,000 చొప్పున)</div>
+<ul class="cal-list" id="bfastList"></ul>
+</div>
+<div class="anna-card">
+<div class="anna-title"><i class="fas fa-bowl-rice"></i> మధ్యాహ్న భోజనం (Lunch)</div>
+<div class="anna-cost">విరాళం: ₹20,000</div>
+<ul class="cal-list" id="lunchList"></ul>
+</div>
+</div>
+<div class="donor-wrapper">
+<div class="donor-content-box">
+<div class="donor-bless-top">శ్రీ వాసాపురం వేంకటేశ్వర స్వామి మరియు మానస లింగేశ్వర స్వామి ఆశీస్సులు ఎల్లవేళలా వీరికి, వీరి కుటుంబ సభ్యులకు ఉండాలని కోరుకుంటున్నాము...</div>
+<div class="donor-split-new">
+<div class="donor-half-new">
+<div class="donor-h-title-new">ఉదయం అల్పాహారం దాత</div>
+<div class="donor-details-new">పేరు: శ్రీ పెమ్మసాని చంద్రశేఖర్ గారు<br>గోత్రం: కౌండిన్యస<br>కుటుంబ సభ్యులు: భార్య, పిల్లలు<br>గ్రామం: వాసాపురం</div>
+</div>
+<div class="donor-center-group">
+<div class="donor-date-top" id="donorNextDate2"></div>
+<div class="donor-center-logo"><img id="donorCenterLogoImg" src="" alt="Favicon Logo"></div>
+<div class="donor-day-bot">శనివారం</div>
+</div>
+<div class="donor-half-new">
+<div class="donor-h-title-new">మధ్యాహ్న భోజన దాత</div>
+<div class="donor-details-new">పేరు: శ్రీ నల్లమిల్లి సత్యనారాయణ గారు<br>గోత్రం: భరద్వాజ<br>కుటుంబ సభ్యులు: భార్య, పిల్లలు<br>గ్రామం: వాసాపురం</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CM026 - Festivals Section -->
+<div class="sec-six-wrap" id="sec-festivals">
+<div class="sec-six">
+<div class="sec-title">ప్రతి సంవత్సరం జరుగు ప్రత్యేక పూజలు మరియు ఉత్సవాలు</div>
+<div class="fest-grid" id="festivalGrid"></div>
+</div>
+</div>
+
+<!-- CM027 - Donation and Renovation Section -->
+<div class="sec-seven-wrap" id="sec-donation">
+<div class="sec-seven-top-desc">
+<strong>టెంపుల్ డెవలప్మెంట్ కోసం డొనేషన్ చేయవచ్చు.</strong> అలాగే ప్రస్తుతం రెనోవేషన్ ఫండ్ కూడా మీరు ఇక్కడే డొనేషన్ చేయవచ్చు.<br>ప్రస్తుతానికి కళ్యాణ మండపం నిర్మాణం జరుగుతున్నది. మొత్తం 20 రూములు మరియు పెద్ద డైనింగ్ హాల్ తో 5 కోట్ల రూపాయల అంచనాతో చేస్తూ ఉన్నారు. ప్రస్తుతం కళ్యాణ మండపం యొక్క బేస్ అయిపోయింది మరియు కాంపౌండ్ వాల్ కంప్లీట్ గా కట్టేశారు.<br>మీ వంతు ఈ కళ్యాణ మండపం కోసం డొనేషన్ చేయగలరు. ఆన్లైన్లో ఇక్కడ ఫామ్ ఫిల్ అప్ చేసిన తర్వాత ఆఫీస్ విజిట్ అయినప్పుడు మీరు యుటిఆర్ నెంబర్ చెప్తే అక్కడ మీకు రసీదు ఇస్తారు.
+</div>
+<div class="sec-seven">
+<div class="donate-left">
+<div class="sec-title">దేవస్థానం డొనేషన్ పోర్టల్</div>
+<div class="qr-box">
+<div style="font-weight:bold;color:var(--temple-dark-red);margin-bottom:5px;">ఈ క్యూఆర్ కోడ్ ను స్కాన్ చేసి డొనేషన్ చేయవచ్చు</div>
+<img id="donationQrImg" src="" alt="QR Code" class="qr-img">
+<div style="font-weight:bold;color:var(--temple-maroon);font-family:'Roboto Slab',serif;">UPI ID: vasapuramtemple@upi</div>
+</div>
+<div class="pay-modes">
+<strong>Payment Accepted:</strong>
+<ul>
+<li>Direct UPI Transfer / PhonePe / Google Pay / Paytm</li>
+<li>Scan & Pay via Official Devasthanam QR Code</li>
+<li>Direct Bank Account Transfer</li>
+</ul>
+</div>
+</div>
+<div class="donate-right">
+<div class="sec-title">దాత వివరాలు</div>
+<div class="form-group"><label>Donor Full Name</label><input type="text" id="donorName" placeholder="Enter Full Name" oninput="formatName(this)"></div>
+<div class="form-group"><label>10 Digit Mobile Number</label><input type="text" id="donorMobile" placeholder="Enter Mobile Number" oninput="formatMobile(this)"></div>
+<div class="form-group">
+<label>-- Select Purpose --</label>
+<select id="donatePurpose" onchange="updateAmount()">
+<option value="annadanam">Annadanam</option>
+<option value="renovation">Temple Renovation (Kalyana Mandapam)</option>
+<option value="vivaha_kattadi">Vivaha Kattadi (₹10,116)</option>
+<option value="saswatha_pooja">Saswatha Pooja (₹25,116)</option>
+<option value="nitya_pooja">Nitya Pooja (₹5,116)</option>
+<option value="other">Other Amount</option>
+</select>
+</div>
+<div class="form-group"><label>Donation Amount (₹)</label><input type="number" id="donateAmount" placeholder="Enter Amount"></div>
+<div class="form-group"><label>UPI Transaction ID (Optional)</label><input type="text" id="donateUtr" placeholder="Enter UTR Number"></div>
+<button class="btn-submit" onclick="generateReceipt()">Submit Details</button>
+<div class="form-note">దయచేసి కౌంటర్లో రసీదు అడిగి తీసుకోవాల్సిందిగా కోరుచున్నాము.</div>
+</div>
+</div>
+</div>
+
+<!-- CM028 - Gallery Section -->
+<div class="sec-eight-wrap" id="sec-gallery">
+<div class="sec-eight">
+<div class="sec-title">Temple Gallery</div>
+<div class="gal-split">
+<div class="gal-col">
+<div class="gal-col-title">New Photos</div>
+<div class="gal-grid" id="newGalleryGrid"></div>
+</div>
+<div class="gal-col">
+<div class="gal-col-title">Old Photos</div>
+<div class="gal-grid" id="oldGalleryGrid"></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CM029 - Footer Section -->
+<div class="footer-wrap">
+<div class="footer-content">
+<div class="foot-col" style="align-items:center;text-align:center;">
+<img id="footLogoImg" src="" alt="Logo" class="foot-logo">
+<div style="color:var(--primary-gold);font-weight:bold;margin-bottom:10px;">Sri Venkateswara Swamy Devasthanam</div>
+<div class="foot-social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+<div class="foot-col">
+<div class="foot-title">Quick Links</div>
+<div class="foot-links">
+<a href="#sec-history"><i class="fas fa-angle-right"></i> Full History</a>
+<a href="#sec-annadanam"><i class="fas fa-angle-right"></i> Annadanam</a>
+<a href="#sec-donation"><i class="fas fa-angle-right"></i> Register / Donate</a>
+</div>
+</div>
+<div class="foot-col">
+<div class="foot-title">Contact Us</div>
+<div class="foot-links">
+<a href="tel:9703719805"><i class="fas fa-phone-alt"></i> 9703 719805</a>
+<a href="mailto:contact.svvsd@gmail.com"><i class="fas fa-envelope"></i> contact.svvsd@gmail.com</a>
+<div style="margin-top:10px;font-size:0.85rem;line-height:1.4;">Vasapuram Village, Rudravaram Mandal, Nandyal District, AP - 518542</div>
+</div>
+</div>
+<div class="foot-col">
+<div class="foot-title">Location Map</div>
+<div class="foot-map-container"><iframe id="mapIframe" src="" allowfullscreen="" loading="lazy"></iframe></div>
+<div class="map-actions">
+<button onclick="window.open('https://maps.app.goo.gl/FDm5michZWYLUAhZ9','_blank')"><i class="fas fa-directions"></i> Directions</button>
+<button onclick="alert('Location Saved!')"><i class="fas fa-bookmark"></i> Save</button>
+<button onclick="alert('Share link copied!')"><i class="fas fa-share-alt"></i> Share</button>
+</div>
+</div>
+</div>
+<div class="foot-bottom">
+<a href="#" class="admin-login-btn"><i class="fas fa-user-shield"></i> Admin Login</a>
+<div>&copy; 2026 Sri Venkateswara Swamy Devasthanam. All rights reserved.</div>
+</div>
+</div>
+
+<!-- CM030 - App Download Modal -->
+<div class="modal-overlay" id="downloadModal">
+<div class="modal-card">
+<img id="modalIconImg" src="" alt="App Icon" class="app-icon">
+<div class="app-title">SVVSD Temple Official App</div>
+<div class="app-sub">Version 2.1 • Size: 12.4 MB</div>
+<div id="installStatus" style="font-size:0.95rem;color:#333;margin-top:10px;">మీరు SVVSD టెంపుల్ అఫీషియల్ యాప్‌ను ఇన్‌స్టాల్ చేయాలనుకుంటున్నారా?</div>
+<div class="progress-bar-container" id="progressContainer"><div class="progress-bar-fill" id="progressFill"></div></div>
+<div class="modal-btn-group">
+<button class="modal-btn btn-install" id="installBtn" onclick="startInstallation()">ఇన్‌స్టాల్ చేయి (Install)</button>
+<button class="modal-btn btn-cancel" id="cancelBtn" onclick="closeDownloadModal()">రద్దు చేయి</button>
+</div>
+</div>
+</div>
+
+<script>
+/* CM031 - Modal Interaction Functions */
+function openDownloadModal(){document.getElementById('downloadModal').style.display='flex';document.getElementById('progressContainer').style.display='none';document.getElementById('progressFill').style.width='0%';document.getElementById('installStatus').innerText='మీరు SVVSD టెంపుల్ అఫీషియల్ యాప్‌ను ఇన్‌స్టాల్ చేయాలనుకుంటున్నారా?';document.getElementById('installBtn').style.display='inline-block';document.getElementById('cancelBtn').innerText='రద్దు చేయి';document.getElementById('cancelBtn').onclick=closeDownloadModal;}
+function closeDownloadModal(){document.getElementById('downloadModal').style.display='none';}
+function startInstallation(){document.getElementById('progressContainer').style.display='block';document.getElementById('installBtn').style.display='none';let p=0;let btn=document.getElementById('cancelBtn');let interval=setInterval(()=>{p+=10;document.getElementById('progressFill').style.width=p+'%';if(p<50){document.getElementById('installStatus').innerText='డౌన్‌లోడ్ అవుతోంది... ('+p+'%)';}else if(p<100){document.getElementById('installStatus').innerText='ఇన్‌స్టాల్ అవుతోంది... ('+p+'%)';}else{clearInterval(interval);document.getElementById('installStatus').innerText='యాప్ విజయవంతంగా ఇన్‌స్టాల్ అయింది!';btn.innerText='పూర్తయింది';btn.onclick=closeDownloadModal;}},250);}
+
+/* CM032 - Form Validation and Calculations */
+function formatName(input){input.value=input.value.toLowerCase().split(' ').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ');}
+function formatMobile(input){input.value=input.value.replace(/\D/g,'').slice(0,10);}
+function updateAmount(){let sel=document.getElementById('donatePurpose').value;let amtInp=document.getElementById('donateAmount');if(sel==='vivaha_kattadi')amtInp.value=10116;else if(sel==='saswatha_pooja')amtInp.value=25116;else if(sel==='nitya_pooja')amtInp.value=5116;else amtInp.value='';}
+function generateReceipt(){alert("Form details submitted successfully! Back-end processing pending.");}
+
+/* CM033 - Master Link Configuration (Update All Links Here) */
+const appLinks={mainLogo:"https://svvsdr.github.io/SVVDS-IMG/7-FEVICON-AND-MAIN-LOGO-ICON.png",qrCode:"https://placehold.co/200x200/ffffff/3d0000?text=Scan+to+Pay",mapEmbedUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15444.646949363066!2d78.6015!3d15.228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDEzJzQwLjgiTiA3OMKwMzYnMDYuMCJF!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin",deities:{lakshmi:"https://svvsdr.github.io/SVVDS-IMG/1.2-LAKSHIMDEVI.jpg",venkateswara:"https://svvsdr.github.io/SVVDS-IMG/1-VENKATESWARA-SWAMY-MAIN.jpeg",goda:"https://svvsdr.github.io/SVVDS-IMG/3-GODADEVI-AMMAVARU.jpeg",shiva:"https://svvsdr.github.io/SVVDS-IMG/2-SIVALINGAM.jpeg",oldSwamy:"https://svvsdr.github.io/SVVDS-IMG/6-OLD-VENKATESWARA-SWAMY.jpeg"},galleryNew:["https://svvsdr.github.io/SVVDS-IMG/1-VENKATESWARA-SWAMY-MAIN.jpeg","https://svvsdr.github.io/SVVDS-IMG/1.2-LAKSHIMDEVI.jpg","https://svvsdr.github.io/SVVDS-IMG/2-SIVALINGAM.jpeg","https://svvsdr.github.io/SVVDS-IMG/3-GODADEVI-AMMAVARU.jpeg"],galleryOld:["https://svvsdr.github.io/SVVDS-IMG/4-OLD-SIVALNGAM.jpeg","https://svvsdr.github.io/SVVDS-IMG/5-OLD-STACHUES.jpeg","https://svvsdr.github.io/SVVDS-IMG/6-OLD-VENKATESWARA-SWAMY.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%282%29.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%283%29.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%284%29.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%285%29.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%286%29.jpeg"]};
+
+/* CM034 - Master Content and Data Configuration */
+const appConfig={
+    content:{
+        topText:`నంద్యాల జిల్లా, రుద్రవరం సమీపంలోని వాసాపురంలో వెలసిన శ్రీ వేంకటేశ్వర స్వామి దేవాలయం ఒక అద్భుతమైన ఆధ్యాత్మిక కేంద్రంగా విలసిల్లుతోంది. సాధారణంగా అర్ధ నిమీలిత నేత్రాలతో ఉండే మూలవిరాట్టులకు భిన్నంగా,`,
+        leftText:`ఇక్కడ స్వామివారి కళ్ళు పూర్తిగా తెరుచుకుని "జాగ్రదావస్థ"లో ఉండటం ప్రధాన ఆకర్షణ. ఇది స్వామివారు తమ కష్టాలను కళ్లారా చూసి తీరుస్తారనే భరోసాను భక్తులకు కల్పిస్తోంది.`,
+        rightText:`ఒకే ప్రాంగణంలో వైష్ణవ, శైవ ఆలయాలు ఉండటం ఇక్కడి హరి-హర అభేద తత్వానికి సజీవ నిదర్శనం. సోషల్ మీడియా ద్వారా ఈ "కళ్ళు తెరిచిన వేంకటేశ్వర స్వామి" ఖ్యాతి విశేషంగా వ్యాపించి,`,
+        botText:`తెలుగు రాష్ట్రాల నలుమూలల నుండి భక్తులను ఆకర్షిస్తోంది. అహోబిలం పారువేట ఉత్సవాలతో ఈ ప్రాంతానికి ఉన్న చారిత్రక అనుబంధానికి ఈ క్షేత్రం మరింత వన్నె తెచ్చింది. భక్తుల రద్దీ పెరగడంతో గ్రామీణ ఆర్థిక వ్యవస్థ, రవాణా, మరియు ఉపాధి అవకాశాలు మెరుగుపడి నంద్యాల పర్యాటక సర్క్యూట్‌లో ఈ ఆలయం ఒక కీలక పుణ్యక్షేత్రంగా మారింది.`,
+        annadanam:`దయచేసి మీరు కూడా అన్నదానం కొరకు బుక్ చేసుకోండి. ప్రతి శనివారం ఇచ్చట వైభవంగా భక్తులకి అల్పాహారం మరియు భోజన అన్నదాన కార్యక్రమాలు జరుగుతూ ఉన్నాయి. భక్తులు తమ కోరికలు నెరవేరిన తర్వాత లేదా నెరవేరడానికి భక్తితో అన్న ప్రసాదం కొరకు విరాళాలు ఇచ్చి అన్నదాన కార్యక్రమాలు వాళ్ళ పేరు మీద రిజిస్టర్ చేసుకుంటున్నారు.`,
+        marquee:`ఇక్కడ టైమింగ్స్ పండుగల రోజులలో డిఫరెంట్ గా ఉంటాయి. నెక్స్ట్ వచ్చే ఫెస్టివల్స్ ని ఇక్కడే అప్డేట్ చేస్తాము. కాబట్టి అప్డేట్స్ కోసం ఈ వెబ్‌సైట్‌ను విజిట్ చేస్తూ ఉండండి. ప్రతి శుక్రవారం మరియు శనివారం స్వామివారికి చాలా వైభవంగా పూజలు మరియు అభిషేకాలు జరుగుతాయి.`
+    },
+    profiles:{
+        committee:[{name:"సింగతల మధుసూదన్ రెడ్డి గారు",role:"చైర్మన్",phone:"9703719805",icon:"fas fa-user-tie"},{name:"డాక్టర్ హరినాథ్ రెడ్డి గారు",role:"గౌరవ అధ్యక్షులు",phone:"",icon:"fas fa-award"},{name:"ఎల్. వి. రంగనాయకులు గారు",role:"వైస్ చైర్మన్",phone:"9494219808",icon:"fas fa-user-tie"},{name:"ఇ.కె.వి. నరసింహులు గారు",role:"కోశాధికారి",phone:"9441040694",icon:"fas fa-file-invoice-dollar"}],
+        priests:[{name:"వారణాసి గోపీశర్మ గారు",role:"వెంకటేశ్వర స్వామి ప్రధాన అర్చకులు",phone:"",icon:"fas fa-om"},{name:"వీరనాల శివశర్మ గారు",role:"శివాలయం ప్రధాన అర్చకులు",phone:"",icon:"fas fa-om"}]
+    },
+    festivals:[
+        {title:"ప్రతి వారం జరిగే పూజలు",desc:"వారపు ప్రత్యేక కార్యక్రమాలు:",sched:["శుక్రవారం: స్వామి అభిషేకం మరియు అలంకరణ","శనివారం: కుంకుమార్చన (ఉదయం 7:30 నుంచి రాత్రి 8:30 వరకు)"]},
+        {title:"వైకుంఠ ఏకాదశి (ముక్కోటి ఏకాదశి)",desc:"ఉత్తర వైకుంఠ ద్వార దర్శనం మరియు ప్రత్యేక ఉత్సవాలు:",sched:["ఉదయం 12:05: స్వామివారికి అభిషేకం","ఉదయం 2:00: ప్రత్యేక అలంకరణ","ఉదయం 3:00 నుండి రాత్రి 8:00 వరకు: ఉత్తర వైకుంఠ ద్వార దర్శనం","ఉదయం 10:00: శ్రీ లక్ష్మీదేవి గోదాదేవి సమేత వాసాపురం వెంకటేశ్వర స్వామి కళ్యాణం","సాయంత్రం 4:00: పల్లకి సేవ మరియు రథోత్సవం"]},
+        {title:"కార్తీక పౌర్ణమి",desc:"కార్తీక మాస ప్రత్యేక కార్యక్రమాలు:",sched:["ఉదయం నుండి సామూహిక హోమాలు","సాయంత్రం వేళ: కోటి దీపోత్సవం","స్వామివారి రథోత్సవం"]},
+        {title:"మహాశివరాత్రి",desc:"శివరాత్రి జాగరణ మరియు కల్యాణ మహోత్సవం:",sched:["అర్ధరాత్రి లింగోద్భవ సమయంలో: మహాభిషేకం","మహా త్రిపుర సుందరీ దేవి సమేత మానస లింగేశ్వర స్వామి వారి కళ్యాణం","పల్లకి సేవ ఉత్సవం"]},
+        {title:"వైశాఖ ఉత్సవాలు",desc:"వార్షికోత్సవ వేడుకలు:",sched:["వైశాఖ షష్ఠి: శివాలయం వార్షికోత్సవం మరియు ప్రత్యేక పూజలు","వైశాఖ సప్తమి: శ్రీ వెంకటేశ్వర స్వామి వారి వార్షిక కార్యక్రమాలు"]}
+    ]
+};
+
+/* CM035 - Initialization and Rendering Functions */
+function injectLinks(){document.getElementById('headImg1').src=appLinks.deities.lakshmi;document.getElementById('headImg2').src=appLinks.deities.venkateswara;document.getElementById('headImg3').src=appLinks.deities.goda;document.getElementById('headImg4').src=appLinks.deities.shiva;document.getElementById('histCenterLogo').src=appLinks.mainLogo;document.getElementById('secThreeCenterImg').src=appLinks.deities.oldSwamy;document.getElementById('donorCenterLogoImg').src=appLinks.mainLogo;document.getElementById('donationQrImg').src=appLinks.qrCode;document.getElementById('footLogoImg').src=appLinks.mainLogo;document.getElementById('modalIconImg').src=appLinks.mainLogo;document.getElementById('mapIframe').src=appLinks.mapEmbedUrl;}
+function applyContent(){document.getElementById('histTopText').innerText=appConfig.content.topText;document.getElementById('histLeftText').innerText=appConfig.content.leftText;document.getElementById('histRightText').innerText=appConfig.content.rightText;document.getElementById('histBotText').innerText=appConfig.content.botText;document.getElementById('readMoreBtn').href="#sec-history";document.getElementById('marqueeTextObj').innerText=appConfig.content.marquee;document.getElementById('annaTextObj').innerText=appConfig.content.annadanam;}
+function generateDynamicUpdates(){let list=document.getElementById('updatesList');let today=new Date();let day=today.getDay();let diffToFri=5-day;let diffToSat=6-day;let nextFri=new Date(today);nextFri.setDate(today.getDate()+(diffToFri<0?7+diffToFri:diffToFri));let nextSat=new Date(today);nextSat.setDate(today.getDate()+(diffToSat<0?7+diffToSat:diffToSat));let prevFri=new Date(nextFri);prevFri.setDate(nextFri.getDate()-7);let prevSat=new Date(nextSat);prevSat.setDate(nextSat.getDate()-7);let upSat2=new Date(nextSat);upSat2.setDate(nextSat.getDate()+7);let format=(d)=>{let opts={month:'short',day:'numeric',year:'numeric',weekday:'long'};return d.toLocaleDateString('en-US',opts);};let html=`<li class="update-item"><div class="update-date"><i class="fas fa-sync"></i> Every Friday</div><div class="update-desc">Swamy Abhishekam and Alankarana</div></li><li class="update-item"><div class="update-date"><i class="fas fa-sync"></i> Every Saturday</div><div class="update-desc">Kumkumarchana & Special Poojas</div></li><li class="update-item completed"><div class="update-date"><i class="far fa-calendar-check"></i> ${format(prevFri)}</div><div class="update-desc">Completed: Swamy Abhishekam</div></li><li class="update-item completed"><div class="update-date"><i class="far fa-calendar-check"></i> ${format(prevSat)}</div><div class="update-desc">Completed: Kumkumarchana</div></li><li class="update-item"><div class="update-date"><i class="far fa-calendar-alt"></i> ${format(nextFri)}</div><div class="update-desc">Upcoming: Swamy Abhishekam</div></li><li class="update-item"><div class="update-date"><i class="far fa-calendar-alt"></i> ${format(nextSat)}</div><div class="update-desc">Upcoming: Special Pooja</div></li><li class="update-item"><div class="update-date"><i class="far fa-calendar-alt"></i> ${format(upSat2)}</div><div class="update-desc">Upcoming: Special Pooja</div></li>`;list.innerHTML=html;}
+function renderProfiles(){let comHtml='';appConfig.profiles.committee.forEach(p=>{let ph=p.phone?`<div class="profile-phone"><i class="fas fa-phone-alt"></i> ${p.phone}</div>`:'';comHtml+=`<div class="profile-card"><img src="${appLinks.mainLogo}" class="profile-img" alt="${p.name}"><div class="profile-name">${p.name}</div><div class="profile-role"><i class="${p.icon}"></i> ${p.role}</div>${ph}</div>`;});document.getElementById('committeeGrid').innerHTML=comHtml;let priHtml='';appConfig.profiles.priests.forEach(p=>{let ph=p.phone?`<div class="profile-phone"><i class="fas fa-phone-alt"></i> ${p.phone}</div>`:'';priHtml+=`<div class="profile-card"><img src="${appLinks.mainLogo}" class="profile-img" alt="${p.name}"><div class="profile-name">${p.name}</div><div class="profile-role"><i class="${p.icon}"></i> ${p.role}</div>${ph}</div>`;});document.getElementById('priestsGrid').innerHTML=priHtml;}
+function generateAnnadanamCalendar(){let d=new Date();let curM=d.getMonth();let curY=d.getFullYear();let nxtM=curM===11?0:curM+1;let nxtY=curM===11?curY+1:curY;let sats=[];let fd1=new Date(curY,curM,1);while(fd1.getMonth()===curM){if(fd1.getDay()===6)sats.push(new Date(fd1));fd1.setDate(fd1.getDate()+1);}let fd2=new Date(nxtY,nxtM,1);while(fd2.getMonth()===nxtM){if(fd2.getDay()===6)sats.push(new Date(fd2));fd2.setDate(fd2.getDate()+1);}let mNames=["జనవరి","ఫిబ్రవరి","మార్చి","ఏప్రిల్","మే","జూన్","జూలై","ఆగస్టు","సెప్టెంబర్","అక్టోబర్","నవంబర్","డిసెంబర్"];let bHtml='';let lHtml='';let nextSat=null;let today=new Date();today.setHours(0,0,0,0);sats.forEach(s=>{let dStr=s.getDate()+" "+mNames[s.getMonth()]+" "+s.getFullYear();let isPast=s<today;if(!isPast&&!nextSat)nextSat=s;let statB=isPast?"COMPLETED":Math.random()>0.5?"BOOKED":"WAITING FOR BOOKING";let iconB=isPast?"<i class='fas fa-check-circle status-icon'></i>":statB==="BOOKED"?"<i class='fas fa-user-check status-icon'></i>":"<i class='fas fa-hourglass-half status-icon'></i>";let clsB=isPast?"status-completed":statB==="BOOKED"?"status-booked":"status-waiting";let statL=isPast?"COMPLETED":Math.random()>0.5?"BOOKED":"WAITING FOR BOOKING";let iconL=isPast?"<i class='fas fa-check-circle status-icon'></i>":statL==="BOOKED"?"<i class='fas fa-user-check status-icon'></i>":"<i class='fas fa-hourglass-half status-icon'></i>";let clsL=isPast?"status-completed":statL==="BOOKED"?"status-booked":"status-waiting";bHtml+=`<li class="cal-item ${clsB}"><span><i class="far fa-calendar-alt"></i> ${dStr}</span><span>${iconB}${statB}</span></li>`;lHtml+=`<li class="cal-item ${clsL}"><span><i class="far fa-calendar-alt"></i> ${dStr}</span><span>${iconL}${statL}</span></li>`;});document.getElementById('bfastList').innerHTML=bHtml;document.getElementById('lunchList').innerHTML=lHtml;if(nextSat){document.getElementById('donorNextDate2').innerHTML=`${nextSat.getDate()} ${mNames[nextSat.getMonth()]} ${nextSat.getFullYear()}`;}}
+function renderFestivals(){let html='';appConfig.festivals.forEach(f=>{let schedHtml='';if(f.sched.length>0){schedHtml='<ul class="fest-sched">'+f.sched.map(s=>`<li>${s}</li>`).join('')+'</ul>';}html+=`<div class="fest-card"><div class="fest-title">${f.title}</div><div class="fest-desc">${f.desc}</div>${schedHtml}</div>`;});document.getElementById('festivalGrid').innerHTML=html;}
+function renderGallery(){let newHtml=appLinks.galleryNew.map(url=>`<img src="${url}" class="gal-img-new" alt="New Temple Photo">`).join('');let oldHtml=appLinks.galleryOld.map(url=>`<img src="${url}" class="gal-img-old" alt="Old Temple Photo">`).join('');document.getElementById('newGalleryGrid').innerHTML=newHtml;document.getElementById('oldGalleryGrid').innerHTML=oldHtml;}
+
+/* CM036 - Execute App Logic on Load */
+injectLinks();
+applyContent();
+generateDynamicUpdates();
+renderProfiles();
+generateAnnadanamCalendar();
+renderFestivals();
+renderGallery();
+</script>
+</body>
+</html>
