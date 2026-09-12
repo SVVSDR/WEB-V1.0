@@ -1,0 +1,21 @@
+{
+"name": "Sri Venkateswara Swamy Devasthanam",
+"short_name": "SVVSD Temple",
+"description": "Official App for Sri Vasapuram Venkateswara Swamy Devasthanam",
+"start_url": "/index.html",
+"display": "standalone",
+"background_color": "#FFF8EE",
+"theme_color": "#3D0000",
+"icons": [
+{
+"src": "https://svvsdr.github.io/SVVDS-IMG/7-FEVICON-AND-MAIN-LOGO-ICON.png",
+"sizes": "192x192",
+"type": "image/png"
+},
+{
+"src": "https://svvsdr.github.io/SVVDS-IMG/7-FEVICON-AND-MAIN-LOGO-ICON.png",
+"sizes": "512x512",
+"type": "image/png"
+}
+]
+}
