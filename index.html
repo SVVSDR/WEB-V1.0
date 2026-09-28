@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sri Venkateswara Swamy Devasthanam</title>
-<link rel="icon" href="https://svvsdr.github.io/SVVDS-IMG/7-FEVICON-AND-MAIN-LOGO-ICON.png" type="image/png">
-<link rel="apple-touch-icon" href="https://svvsdr.github.io/SVVDS-IMG/7-FEVICON-AND-MAIN-LOGO-ICON.png">
+<title>VVD-Devastanam</title>
+<link rel="icon" href="https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/main-vvd-logo-fevicon-icon-both.png" type="image/png">
+<link rel="apple-touch-icon" href="https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/main-vvd-logo-fevicon-icon-both.png">
 <link rel="manifest" href="manifest.json">
 
 <!-- CM156 - External Fonts and Resources -->
@@ -25,6 +25,8 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 .top-left,.top-center,.top-right{display:flex;align-items:center;gap:12px;}
 .top-left{cursor:pointer;user-select:none;transition:transform 0.2s ease,color 0.2s ease;}
 .top-left:hover{color:var(--primary-gold);transform:scale(1.03);}
+.admin-badge-top{background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:var(--primary-gold);padding:3px 10px;border-radius:12px;font-weight:bold;font-size:0.75rem;border:1px solid var(--primary-gold);box-shadow:0 2px 4px rgba(0,0,0,0.5);letter-spacing:0.5px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:4px;}
+.admin-badge-top:hover{transform:scale(1.05);color:#fff;}
 @media (max-width:1150px){.top-bar{flex-direction:column;gap:6px;text-align:center;}.top-left,.top-center,.top-right{justify-content:center;flex-wrap:wrap;}}
 
 /* CM159 - Header Main Background */
@@ -54,192 +56,186 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 .temple-address{font-family:'Ponnala',sans-serif;font-size:clamp(0.78rem,0.95vw,0.95rem);font-weight:400;color:#FFC800;margin-top:3px;line-height:1.3;letter-spacing:0.4px;max-width:850px;text-shadow:0 0 6px rgba(255,255,255,0.8), 2px 2px 4px #000000;}
 
 /* CM163 - History Section */
-.history-sec{width:100%;max-width:1200px;margin:0 auto;padding:5px 3%;display:flex;flex-direction:column;gap:5px;background-color:#ffffff;}
-.hist-top,.hist-bot{font-family:'Ravi Prakash',cursive;font-size:1.3rem;color:var(--temple-maroon);text-align:justify;line-height:1.1;letter-spacing:0.5px;}
-.hist-mid{display:flex;align-items:center;justify-content:center;gap:15px;width:100%;}
-.hist-left,.hist-right{flex:1;font-family:'Ravi Prakash',cursive;font-size:1.3rem;color:var(--temple-maroon);text-align:justify;line-height:1.1;letter-spacing:0.5px;}
-.hist-logo-box{width:120px;height:120px;flex-shrink:0;border-radius:50%;border:3px solid var(--primary-gold);box-shadow:0 4px 10px rgba(0,0,0,0.4);overflow:hidden;}
+.history-sec{width:100%;max-width:1200px;margin:0 auto;padding:10px 3%;display:flex;flex-direction:column;gap:5px;background-color:#ffffff;}
+.hist-top,.hist-bot{font-family:'Ravi Prakash',cursive;font-size:1.3rem;color:var(--temple-maroon);text-align:justify;line-height:1.2;letter-spacing:0.5px;}
+.hist-mid{display:flex;align-items:center;justify-content:center;gap:15px;width:100%;margin:5px 0;}
+.hist-left,.hist-right{flex:1;font-family:'Ravi Prakash',cursive;font-size:1.3rem;color:var(--temple-maroon);text-align:justify;line-height:1.2;letter-spacing:0.5px;}
+.hist-logo-box{width:140px;height:140px;flex-shrink:0;border-radius:50%;border:4px solid var(--primary-gold);box-shadow:0 6px 12px rgba(0,0,0,0.4);overflow:hidden;}
 .hist-logo-box img{width:100%;height:100%;object-fit:cover;display:block;}
-@media (max-width:800px){.hist-mid{flex-direction:column;gap:10px;}.hist-left,.hist-right{width:100%;}.hist-logo-box{width:90px;height:90px;}}
-.read-more-box{display:flex;justify-content:flex-end;width:100%;margin-top:2px;}
-.read-more-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:var(--text-light);font-family:'Roboto Slab',serif;font-size:0.85rem;font-weight:600;text-decoration:none;border-radius:20px;border:1px solid var(--primary-gold);box-shadow:0 3px 6px rgba(0,0,0,0.3);transition:all 0.3s ease;}
-.read-more-btn:hover{transform:translateY(-2px);box-shadow:0 5px 10px rgba(0,0,0,0.5);color:var(--primary-gold);}
+@media (max-width:800px){.hist-mid{flex-direction:column;gap:15px;}.hist-left,.hist-right{width:100%;}.hist-logo-box{width:110px;height:110px;}}
+.read-more-box{display:flex;justify-content:flex-end;width:100%;margin-top:5px;}
+.read-more-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 20px;background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:var(--text-light);font-family:'Roboto Slab',serif;font-size:0.9rem;font-weight:600;text-decoration:none;border-radius:25px;border:1px solid var(--primary-gold);box-shadow:0 4px 8px rgba(0,0,0,0.3);transition:all 0.3s ease;}
+.read-more-btn:hover{transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,0.5);color:var(--primary-gold);}
 
 /* CM164 - Scrolling Ticker */
-.scroll-ticker-wrap{width:100%;background:var(--temple-maroon);color:var(--primary-gold);padding:2px 0;border-top:1px solid var(--primary-gold);border-bottom:1px solid var(--primary-gold);overflow:hidden;position:relative;display:flex;align-items:center;}
-.scroll-ticker-text{font-family:'Timmana',serif;font-size:1rem;white-space:nowrap;animation:scrollLeft 35s linear infinite;display:inline-block;padding-left:100%;letter-spacing:0.5px;}
+.scroll-ticker-wrap{width:100%;background:var(--temple-maroon);color:var(--primary-gold);padding:3px 0;border-top:1px solid var(--primary-gold);border-bottom:1px solid var(--primary-gold);overflow:hidden;position:relative;display:flex;align-items:center;}
+.scroll-ticker-text{font-family:'Timmana',serif;font-size:1.1rem;white-space:nowrap;animation:scrollLeft 35s linear infinite;display:inline-block;padding-left:100%;letter-spacing:0.5px;}
 @keyframes scrollLeft{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
 
 /* CM165 - Timings and Updates Section */
 .sec-three-wrap{width:100%;background-color:var(--bg-sec3);padding:15px 0;}
-.sec-three{width:100%;margin:0 auto;padding:0 2%;display:flex;gap:15px;align-items:stretch;justify-content:space-between;}
+.sec-three{width:100%;max-width:1300px;margin:0 auto;padding:0 2%;display:flex;gap:15px;align-items:stretch;justify-content:space-between;}
 @media (max-width:900px){.sec-three{flex-direction:column;gap:15px;}}
-.info-card{flex:1;background:var(--text-light);border:2px solid var(--primary-gold);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.2);overflow:hidden;min-width:300px;}
-.info-card-hdr{background:var(--temple-maroon);color:var(--text-light);padding:5px;font-family:'Roboto Slab',serif;font-size:0.9rem;font-weight:600;text-align:center;border-bottom:2px solid var(--primary-gold);}
-.info-card-body{padding:8px;font-family:'Roboto Slab',serif;color:var(--temple-maroon);display:flex;flex-direction:column;gap:8px;}
-.time-blk{border-bottom:1px dashed #ccc;padding-bottom:5px;}
+.info-card{flex:1;background:var(--text-light);border:2px solid var(--primary-gold);border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.2);overflow:hidden;min-width:300px;display:flex;flex-direction:column;}
+.info-card-hdr{background:linear-gradient(90deg,var(--temple-dark-red),var(--temple-maroon));color:var(--text-light);padding:8px;font-family:'Roboto Slab',serif;font-size:1rem;font-weight:600;text-align:center;border-bottom:2px solid var(--primary-gold);letter-spacing:1px;text-transform:uppercase;}
+.info-card-body{padding:12px;font-family:'Roboto Slab',serif;color:var(--temple-maroon);display:flex;flex-direction:column;gap:12px;flex:1;}
+.time-blk{border-bottom:1px dashed #ccc;padding-bottom:8px;}
 .time-blk:last-child{border-bottom:none;padding-bottom:0;}
-.time-title{font-size:0.85rem;font-weight:bold;margin-bottom:4px;display:flex;align-items:center;gap:5px;color:var(--temple-dark-red);}
+.time-title{font-size:0.9rem;font-weight:bold;margin-bottom:6px;display:flex;align-items:center;gap:6px;color:var(--temple-dark-red);}
 .time-title i{color:var(--primary-gold);}
-.time-slot{display:flex;justify-content:space-between;font-size:0.75rem;margin-bottom:2px;font-family:'Roboto Slab',serif;}
-.time-slot span:last-child{font-weight:600;color:#000;}
-.update-list{list-style:none;max-height:150px;overflow-y:auto;padding-right:5px;}
+.time-slot{display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:4px;font-family:'Roboto Slab',serif;}
+.time-slot span:last-child{font-weight:700;color:#000;}
+.update-list{list-style:none;max-height:200px;overflow-y:auto;padding-right:5px;flex:1;}
 .update-list::-webkit-scrollbar{width:6px;}
 .update-list::-webkit-scrollbar-thumb{background:var(--primary-gold);border-radius:6px;}
 .update-list::-webkit-scrollbar-track{background:#f1f1f1;}
-.update-item{background:#f9f0e5;border-left:4px solid var(--primary-gold);padding:6px;margin-bottom:6px;border-radius:4px;font-size:0.75rem;}
-.update-date{font-weight:bold;color:var(--temple-maroon);margin-bottom:2px;font-family:'Roboto Slab',serif;font-size:0.75rem;}
-.update-desc{color:#333;line-height:1.2;font-family:'Ponnala',sans-serif;}
-.sec-three-img-box{flex:0 0 250px;display:flex;justify-content:center;align-items:center;padding:5px;}
-.sec-three-img-box img{width:100%;height:100%;max-height:200px;border-radius:8px;border:2px solid var(--primary-gold);box-shadow:0 4px 10px rgba(0,0,0,0.3);object-fit:cover;}
+.update-item{background:#f9f0e5;border-left:4px solid var(--primary-gold);padding:8px;margin-bottom:8px;border-radius:4px;font-size:0.8rem;box-shadow:0 2px 4px rgba(0,0,0,0.05);}
+.update-date{font-weight:bold;color:var(--temple-maroon);margin-bottom:4px;font-family:'Roboto Slab',serif;font-size:0.8rem;}
+.update-desc{color:#333;line-height:1.3;font-family:'Ponnala',sans-serif;}
+.sec-three-img-box{flex:0 0 300px;display:flex;justify-content:center;align-items:center;padding:5px;}
+.sec-three-img-box img{width:100%;height:100%;max-height:350px;border-radius:10px;border:3px solid var(--primary-gold);box-shadow:0 6px 15px rgba(0,0,0,0.3);object-fit:cover;}
 @media (max-width:900px){.sec-three-img-box{flex:1 1 100%;order:-1;}}
 
 /* CM166 - Committee and Priests Section */
 .sec-four-wrap{width:100%;background-color:var(--bg-sec4);padding:15px 0;}
-.stylish-divider{width:80%;max-width:1000px;height:2px;background:linear-gradient(90deg,transparent,var(--primary-gold),transparent);margin:10px auto;}
-.sec-four{width:100%;max-width:1200px;margin:0 auto;padding:0 3%;display:flex;gap:15px;align-items:stretch;}
+.stylish-divider{width:80%;max-width:1000px;height:3px;background:linear-gradient(90deg,transparent,var(--primary-gold),transparent);margin:15px auto;}
+.sec-four{width:100%;max-width:1300px;margin:0 auto;padding:0 3%;display:flex;gap:15px;align-items:stretch;}
 .sec-four-col{background:transparent;display:flex;flex-direction:column;}
 .sec-four-left{flex:2;border-right:2px solid rgba(255,200,0,0.6);padding-right:15px;}
-.sec-four-right{flex:1;padding-left:5px;}
-.profile-grid{padding:5px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:15px;justify-items:center;align-items:start;flex:1;}
-.profile-card{text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;width:100%;}
-.profile-img{width:60px;height:60px;border-radius:50%;border:2px solid var(--primary-gold);object-fit:cover;box-shadow:0 3px 6px rgba(0,0,0,0.3);}
-.profile-name{font-family:'Chathura',sans-serif;font-size:0.95rem;font-weight:800;color:var(--temple-maroon);line-height:0.9;margin-top:2px;}
-.profile-role{font-family:'Chathura',sans-serif;font-size:0.95rem;font-weight:800;color:#555;line-height:0.9;margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;text-align:center;}
-.profile-phone{font-family:'Roboto Slab',serif;font-size:0.75rem;color:var(--top-bar-bg);font-weight:600;margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;}
-.profile-role i{color:var(--primary-gold);font-size:0.8rem;}
+.sec-four-right{flex:1;padding-left:10px;}
+.profile-grid{padding:5px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;justify-items:center;align-items:start;flex:1;}
+.profile-card{text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;background:rgba(255,255,255,0.5);padding:10px;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.05);border:1px solid rgba(255,200,0,0.3);transition:transform 0.3s;}
+.profile-card:hover{transform:translateY(-3px);box-shadow:0 6px 12px rgba(0,0,0,0.1);background:#fff;}
+.profile-img{width:80px;height:80px;border-radius:50%;border:3px solid var(--primary-gold);object-fit:cover;box-shadow:0 4px 8px rgba(0,0,0,0.3);}
+.profile-name{font-family:'Chathura',sans-serif;font-size:1.45rem;font-weight:800;color:var(--temple-maroon);line-height:1;margin-top:4px;text-shadow:0 1px 1px rgba(0,0,0,0.1);}
+.profile-role{font-family:'Chathura',sans-serif;font-size:1.1rem;font-weight:800;color:#555;line-height:1;margin-top:2px;display:flex;align-items:center;justify-content:center;gap:4px;text-align:center;}
+.profile-phone{font-family:'Roboto Slab',serif;font-size:0.8rem;color:var(--top-bar-bg);font-weight:600;margin-top:4px;display:flex;align-items:center;justify-content:center;gap:4px;background:#FFF8EE;padding:3px 8px;border-radius:12px;border:1px dashed var(--primary-gold);}
+.profile-role i{color:var(--primary-gold);font-size:0.9rem;}
 .profile-phone i{color:var(--temple-maroon);}
-@media (max-width:850px){.sec-four{flex-direction:column;}.sec-four-left,.sec-four-right{width:100%;padding:0;border:none;}.sec-four-left{border-bottom:2px solid rgba(255,200,0,0.6);padding-bottom:15px;margin-bottom:10px;}.profile-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:850px){.sec-four{flex-direction:column;}.sec-four-left,.sec-four-right{width:100%;padding:0;border:none;}.sec-four-left{border-bottom:2px solid rgba(255,200,0,0.6);padding-bottom:15px;margin-bottom:15px;}.profile-grid{grid-template-columns:repeat(2,1fr);}}
 
-/* CM167 - Annadanam Section */
-.sec-five-wrap{width:100%;background-color:var(--bg-sec5);padding:15px 0;}
-.sec-five{width:100%;margin:0 auto;padding:0 2%;display:flex;flex-direction:column;gap:15px;}
-.anna-text-box{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;}
-.anna-text{width:100%;font-family:'Ramaraja',serif;font-size:1.2rem;color:var(--temple-maroon);text-align:justify;line-height:1.2;margin:0;padding:0;}
-.btn-small-book{background:linear-gradient(135deg,#006400,#004d00);color:#fff;padding:6px 16px;border-radius:20px;font-family:'Roboto Slab',serif;font-size:0.85rem;font-weight:bold;text-decoration:none;border:1px solid var(--primary-gold);box-shadow:0 3px 6px rgba(0,0,0,0.3);white-space:nowrap;transition:transform 0.2s;display:inline-block;margin-top:4px;}
-.btn-small-book:hover{transform:scale(1.05);}
-.anna-grid{display:flex;gap:40px;justify-content:center;width:100%;margin:0;}
-@media (max-width:850px){.anna-grid{flex-direction:column;gap:15px;}}
-.anna-card{flex:1;background:#fff;border:2px solid var(--primary-gold);border-radius:8px;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;flex-direction:column;gap:0;}
-.anna-title{font-family:'Ramaraja',serif;font-size:1.5rem;color:var(--temple-maroon);text-align:center;font-weight:bold;margin:0;padding:0;}
-.anna-cost{font-family:'Ramaraja',serif;font-size:1.2rem;color:#b8860b;text-align:center;margin-bottom:6px;font-weight:bold;border-bottom:1px dashed #ccc;padding-bottom:4px;}
-.cal-list{list-style:none;display:flex;flex-direction:column;gap:0;margin:0;padding:0;}
-.cal-item{display:flex;justify-content:space-between;align-items:center;padding:5px 8px;font-family:'Roboto Slab',serif;font-size:0.8rem;font-weight:bold;border-bottom:1px solid #eee;}
+/* CM167 - Stylish Section Titles */
+.sec-title{font-family:'Ramaraja',serif;font-size:2rem;color:var(--temple-dark-red);text-align:center;font-weight:bold;margin-bottom:20px;letter-spacing:1px;position:relative;padding-bottom:12px;text-shadow:1px 1px 3px rgba(0,0,0,0.15);}
+.sec-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:120px;height:4px;background:linear-gradient(90deg,transparent,var(--primary-gold),transparent);border-radius:2px;}
+.sec-title-small{font-family:'Ramaraja',serif;font-size:1.7rem;color:var(--temple-maroon);text-align:center;font-weight:bold;margin-bottom:15px;position:relative;padding-bottom:8px;}
+.sec-title-small::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,transparent,var(--primary-gold),transparent);}
+
+/* CM168 - Annadanam Section */
+.sec-five-wrap{width:100%;background-color:var(--bg-sec5);padding:20px 0;}
+.sec-five{width:100%;margin:0 auto;padding:0 3%;display:flex;flex-direction:column;gap:20px;max-width:1300px;}
+.anna-text-box{display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;background:#fff;padding:15px;border-radius:10px;border:2px solid var(--primary-gold);box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.anna-text{width:100%;font-family:'Ramaraja',serif;font-size:1.3rem;color:var(--temple-maroon);text-align:center;line-height:1.3;margin:0;padding:0;}
+.btn-small-book{background:linear-gradient(135deg,#006400,#004d00);color:#fff;padding:8px 24px;border-radius:25px;font-family:'Roboto Slab',serif;font-size:1rem;font-weight:bold;text-decoration:none;border:2px solid var(--primary-gold);box-shadow:0 4px 10px rgba(0,0,0,0.3);white-space:nowrap;transition:transform 0.2s;display:inline-flex;align-items:center;gap:6px;margin-top:5px;letter-spacing:0.5px;}
+.btn-small-book:hover{transform:scale(1.05);box-shadow:0 6px 15px rgba(0,0,0,0.4);}
+.anna-grid{display:flex;gap:30px;justify-content:center;width:100%;margin:0;}
+@media (max-width:900px){.anna-grid{flex-direction:column;gap:20px;}}
+.anna-card{flex:1;background:linear-gradient(180deg,#fff,#fffdf5);border:3px solid var(--primary-gold);border-radius:12px;padding:0;box-shadow:0 8px 20px rgba(0,0,0,0.15);display:flex;flex-direction:column;overflow:hidden;}
+.anna-hdr-top{background:linear-gradient(90deg,var(--temple-dark-red),var(--temple-maroon));color:var(--primary-gold);padding:12px;text-align:center;}
+.anna-title{font-family:'Ramaraja',serif;font-size:1.6rem;font-weight:bold;margin:0;padding:0;text-shadow:1px 1px 2px rgba(0,0,0,0.3);}
+.anna-cost{font-family:'Ponnala',sans-serif;font-size:1rem;color:#fff;text-align:center;margin-top:4px;font-weight:bold;}
+.cal-list{list-style:none;display:flex;flex-direction:column;gap:0;margin:0;padding:10px;}
+.cal-item{display:flex;justify-content:space-between;align-items:center;padding:10px;font-family:'Roboto Slab',serif;font-size:0.85rem;font-weight:bold;border-bottom:1px dashed #ddd;transition:background 0.2s ease;}
 .cal-item:last-child{border-bottom:none;}
-.status-completed{color:#d32f2f;background:#fff5f5;}
-.status-waiting{color:#e65100;background:#fff8f0;}
+.status-completed{color:#d32f2f;background:#fffafa;}
+.status-waiting{color:#e65100;background:#fffcf0;}
 .status-booked{color:#1565c0;background:#f0f8ff;}
-.status-icon{margin-right:5px;}
+.status-icon{margin-right:6px;font-size:1rem;}
 
-/* CM168 - Donor Section Layout */
-.donor-wrapper{position:relative;margin-top:10px;padding:5px;display:flex;flex-direction:column;align-items:center;width:100%;}
-.donor-content-box{position:relative;z-index:2;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center;background:transparent;}
-.donor-bless-top{font-family:'Ramaraja',serif;font-size:1.3rem;color:var(--temple-maroon);font-weight:bold;text-align:center;margin-bottom:10px;text-shadow:1px 1px 2px rgba(0,0,0,0.1);line-height:1.2;}
-.donor-split-new{display:flex;align-items:stretch;justify-content:center;gap:15px;width:100%;flex-wrap:wrap;}
-.donor-half-new{flex:1;min-width:260px;background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(255,248,220,0.9));border:2px solid var(--primary-gold);padding:10px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.15);text-align:center;position:relative;overflow:hidden;}
-.donor-half-new::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--temple-maroon),var(--primary-gold));}
-.donor-center-group{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;z-index:3;margin:0 5px;}
-.donor-date-top{font-family:'Roboto Slab',serif;font-size:0.8rem;font-weight:bold;color:#b8860b;background:#FFF8EE;padding:2px 8px;border-radius:15px;border:1px dashed var(--primary-gold);margin-bottom:2px;}
-.donor-center-logo{width:70px;height:70px;border-radius:50%;border:2px solid var(--primary-gold);box-shadow:0 3px 8px rgba(0,0,0,0.3);overflow:hidden;background:#fff;}
+/* CM169 - Dynamic Donor Section */
+.donor-wrapper{position:relative;margin-top:15px;padding:10px 5px;display:flex;flex-direction:column;align-items:center;width:100%;background:rgba(255,255,255,0.4);border-radius:12px;border:1px solid rgba(255,200,0,0.3);}
+.donor-content-box{position:relative;z-index:2;width:100%;max-width:1000px;display:flex;flex-direction:column;align-items:center;background:transparent;}
+.donor-bless-top{font-family:'Ramaraja',serif;font-size:1.4rem;color:var(--temple-maroon);font-weight:bold;text-align:center;margin-bottom:15px;text-shadow:1px 1px 2px rgba(0,0,0,0.1);line-height:1.3;}
+.donor-split-new{display:flex;align-items:stretch;justify-content:center;gap:20px;width:100%;flex-wrap:wrap;}
+.donor-half-new{flex:1;min-width:280px;background:linear-gradient(135deg,#ffffff,#fff8dc);border:2px solid var(--primary-gold);padding:15px;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,0.15);text-align:center;position:relative;overflow:hidden;transition:transform 0.3s;}
+.donor-half-new:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+.donor-half-new::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--temple-maroon),var(--primary-gold),var(--temple-maroon));}
+.donor-center-group{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;z-index:3;margin:0 10px;}
+.donor-date-top{font-family:'Roboto Slab',serif;font-size:0.9rem;font-weight:bold;color:var(--temple-dark-red);background:var(--primary-gold);padding:4px 12px;border-radius:20px;box-shadow:0 2px 5px rgba(0,0,0,0.2);margin-bottom:5px;}
+.donor-center-logo{width:80px;height:80px;border-radius:50%;border:3px solid var(--temple-maroon);box-shadow:0 4px 10px rgba(0,0,0,0.3);overflow:hidden;background:#fff;}
 .donor-center-logo img{width:100%;height:100%;object-fit:cover;}
-.donor-day-bot{font-family:'Ponnala',sans-serif;font-size:0.95rem;font-weight:bold;color:var(--temple-maroon);margin-top:2px;}
-@media (max-width:800px){.donor-split-new{flex-direction:column;}.donor-center-group{margin:10px 0;}}
-.donor-h-title-new{font-family:'Ramaraja',serif;font-size:1.3rem;color:var(--temple-dark-red);font-weight:bold;margin:0 0 6px 0;text-decoration:underline;text-decoration-color:var(--primary-gold);text-underline-offset:3px;}
-.donor-details-new{font-family:'Ramaraja',serif;font-size:1.1rem;color:#333;line-height:1.3;margin-bottom:6px;border-bottom:1px dashed #ccc;padding-bottom:4px;}
+.donor-day-bot{font-family:'Ponnala',sans-serif;font-size:1.1rem;font-weight:bold;color:var(--temple-maroon);margin-top:5px;text-shadow:0 1px 1px rgba(0,0,0,0.1);}
+@media (max-width:850px){.donor-split-new{flex-direction:column;}.donor-center-group{margin:15px 0;}}
+.donor-h-title-new{font-family:'Ramaraja',serif;font-size:1.5rem;color:var(--temple-dark-red);font-weight:bold;margin:0 0 10px 0;position:relative;padding-bottom:5px;}
+.donor-h-title-new::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:var(--primary-gold);}
+.donor-details-new{font-family:'Ramaraja',serif;font-size:1.2rem;color:#222;line-height:1.4;margin-bottom:8px;border-bottom:1px dashed #ccc;padding-bottom:6px;}
 .donor-details-new:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.fallback-om{font-family:'Ramaraja',serif;font-size:1.5rem;color:#d32f2f;font-weight:bold;margin-top:10px;}
+.fallback-om{font-family:'Ramaraja',serif;font-size:1.6rem;color:#d32f2f;font-weight:bold;margin-top:15px;}
 
-/* CM169 - Festivals Section */
-.sec-six-wrap{width:100%;background-color:var(--bg-sec6);padding:20px 0;}
-.sec-six{width:100%;max-width:1200px;margin:0 auto;padding:0 3%;display:flex;flex-direction:column;gap:15px;}
-.sec-title{font-family:'Roboto Slab',serif;font-size:1.4rem;color:var(--temple-maroon);text-align:center;font-weight:bold;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid var(--primary-gold);padding-bottom:5px;}
-.fest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px;}
-.fest-card{background:#fff;border-left:4px solid var(--primary-gold);padding:12px;border-radius:6px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
-.fest-title{font-family:'Ramaraja',serif;font-size:1.4rem;color:var(--temple-dark-red);font-weight:bold;margin-bottom:6px;}
-.fest-desc{font-family:'Ponnala',sans-serif;font-size:1rem;color:#444;line-height:1.4;}
-.fest-sched{margin-top:6px;padding-left:15px;list-style-type:circle;font-family:'Roboto Slab',serif;font-size:0.85rem;color:#222;}
+/* CM170 - Festivals Section */
+.sec-six-wrap{width:100%;background-color:var(--bg-sec6);padding:25px 0;}
+.sec-six{width:100%;max-width:1300px;margin:0 auto;padding:0 3%;display:flex;flex-direction:column;gap:20px;}
+.fest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;}
+.fest-card{background:#fff;border:2px solid rgba(255,200,0,0.4);border-top:5px solid var(--primary-gold);padding:15px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.3s,box-shadow 0.3s;}
+.fest-card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,0.15);border-color:var(--primary-gold);}
+.fest-title{font-family:'Ramaraja',serif;font-size:1.6rem;color:var(--temple-dark-red);font-weight:bold;margin-bottom:8px;border-bottom:1px dashed #ccc;padding-bottom:5px;}
+.fest-desc{font-family:'Ponnala',sans-serif;font-size:1.1rem;color:#444;line-height:1.4;margin-bottom:10px;}
+.fest-sched{padding-left:20px;list-style-type:square;font-family:'Roboto Slab',serif;font-size:0.9rem;color:#222;line-height:1.6;}
+.fest-sched li::marker{color:var(--primary-gold);}
 
-/* CM170 - Donation and Forms Section */
-.sec-seven-wrap{width:100%;background-color:var(--bg-sec7);padding:20px 0;}
-.sec-seven-top-desc{width:100%;max-width:1200px;margin:0 auto 15px;font-family:'Ponnala',sans-serif;font-size:1.1rem;color:var(--temple-maroon);text-align:center;line-height:1.5;background:#fff;padding:15px;border:2px solid var(--primary-gold);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-.sec-seven{width:100%;max-width:1200px;margin:0 auto;padding:0 3%;display:flex;gap:20px;align-items:stretch;}
-@media(max-width:850px){.sec-seven{flex-direction:column;}}
-.donate-left,.donate-right{flex:1;background:#fff;border:2px solid var(--primary-gold);border-radius:8px;padding:15px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-.qr-box{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;}
-.qr-img{width:200px;height:200px;border:3px solid var(--temple-maroon);border-radius:8px;padding:5px;}
-.pay-modes{font-family:'Roboto Slab',serif;font-size:0.85rem;color:#333;text-align:left;width:100%;margin-top:10px;}
-.pay-modes ul{padding-left:20px;line-height:1.6;}
-.form-group{margin-bottom:12px;display:flex;flex-direction:column;gap:4px;}
-.form-group label{font-family:'Roboto Slab',serif;font-size:0.85rem;font-weight:bold;color:var(--temple-maroon);}
-.form-group input,.form-group select{padding:8px;border:1px solid #ccc;border-radius:4px;font-family:'Roboto Slab',serif;font-size:0.9rem;width:100%;outline:none;}
-.form-group input:focus,.form-group select:focus{border-color:var(--primary-gold);box-shadow:0 0 4px rgba(255,200,0,0.5);}
-.btn-submit{background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:#fff;border:none;padding:10px;border-radius:6px;font-family:'Roboto Slab',serif;font-size:1rem;font-weight:bold;cursor:pointer;width:100%;margin-top:10px;transition:0.3s;}
-.btn-submit:hover{opacity:0.9;}
-.form-note{font-family:'Ponnala',sans-serif;font-size:0.9rem;color:#d32f2f;margin-top:8px;text-align:center;font-weight:bold;}
+/* CM171 - Donation and Forms Section */
+.sec-seven-wrap{width:100%;background-color:var(--bg-sec7);padding:25px 0;}
+.sec-seven-top-desc{width:100%;max-width:1200px;margin:0 auto 20px;font-family:'Ponnala',sans-serif;font-size:1.15rem;color:var(--temple-maroon);text-align:center;line-height:1.5;background:linear-gradient(135deg,#fff,#fffdf5);padding:20px;border:2px solid var(--primary-gold);border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,0.15);}
+.sec-seven{width:100%;max-width:1200px;margin:0 auto;padding:0 3%;display:flex;gap:25px;align-items:stretch;}
+@media(max-width:900px){.sec-seven{flex-direction:column;}}
+.donate-left,.donate-right{flex:1;background:#fff;border:3px solid var(--primary-gold);border-radius:12px;padding:20px;box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+.qr-box{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;background:#fff8ee;padding:15px;border-radius:10px;border:1px dashed var(--primary-gold);}
+.qr-img{width:220px;height:220px;border:4px solid var(--temple-maroon);border-radius:10px;padding:5px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+.pay-modes{font-family:'Roboto Slab',serif;font-size:0.9rem;color:#333;text-align:left;width:100%;margin-top:15px;background:#f9f9f9;padding:15px;border-radius:8px;border-left:4px solid var(--primary-gold);}
+.pay-modes ul{padding-left:20px;line-height:1.7;margin-top:5px;}
+.form-group{margin-bottom:15px;display:flex;flex-direction:column;gap:6px;}
+.form-group label{font-family:'Roboto Slab',serif;font-size:0.9rem;font-weight:bold;color:var(--temple-maroon);}
+.form-group input,.form-group select{padding:10px 12px;border:2px solid #ddd;border-radius:6px;font-family:'Roboto Slab',serif;font-size:0.95rem;width:100%;outline:none;transition:border-color 0.3s,box-shadow 0.3s;}
+.form-group input:focus,.form-group select:focus{border-color:var(--primary-gold);box-shadow:0 0 6px rgba(255,200,0,0.4);}
+.btn-submit{background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:var(--primary-gold);border:2px solid var(--primary-gold);padding:14px;border-radius:8px;font-family:'Roboto Slab',serif;font-size:1.1rem;font-weight:bold;cursor:pointer;width:100%;margin-top:15px;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:1px;box-shadow:0 6px 12px rgba(0,0,0,0.3);}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,0,0,0.4);color:#fff;}
+.form-note{font-family:'Ponnala',sans-serif;font-size:0.95rem;color:#d32f2f;margin-top:10px;text-align:center;font-weight:bold;}
 
-/* CM171 - Gallery Section */
-.sec-eight-wrap{width:100%;background-color:var(--bg-sec8);padding:20px 0;}
+/* CM172 - Gallery Section */
+.sec-eight-wrap{width:100%;background-color:var(--bg-sec8);padding:25px 0;}
 .sec-eight{width:100%;max-width:1400px;margin:0 auto;padding:0 2%;display:flex;flex-direction:column;gap:20px;}
-.gal-split{display:flex;gap:20px;width:100%;}
+.gal-split{display:flex;gap:25px;width:100%;}
 @media(max-width:900px){.gal-split{flex-direction:column;}}
-.gal-col{flex:1;display:flex;flex-direction:column;gap:10px;}
-.gal-col-title{font-family:'Roboto Slab',serif;font-size:1.2rem;font-weight:bold;color:var(--temple-maroon);text-align:center;background:var(--primary-gold);padding:5px;border-radius:4px;}
-.gal-grid-new{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;}
-.gal-grid-old{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;}
-.gal-img-new{width:100%;aspect-ratio:1/2;object-fit:cover;border:2px solid var(--primary-gold);border-radius:6px;box-shadow:0 3px 8px rgba(0,0,0,0.2);transition:transform 0.3s;}
-.gal-img-old{width:100%;aspect-ratio:2/1;object-fit:cover;border:2px solid var(--primary-gold);border-radius:6px;box-shadow:0 3px 8px rgba(0,0,0,0.2);transition:transform 0.3s;}
-.gal-img-new:hover,.gal-img-old:hover{transform:scale(1.02);z-index:2;position:relative;}
+.gal-col{flex:1;display:flex;flex-direction:column;gap:15px;}
+.gal-col-title{font-family:'Roboto Slab',serif;font-size:1.3rem;font-weight:bold;color:var(--temple-maroon);text-align:center;background:linear-gradient(90deg,var(--primary-gold),#ffdf00);padding:8px;border-radius:6px;box-shadow:0 3px 6px rgba(0,0,0,0.1);letter-spacing:0.5px;}
+.gal-grid-new{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px;}
+.gal-grid-old{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
+.gal-img-new{width:100%;aspect-ratio:3/4;object-fit:cover;border:3px solid var(--primary-gold);border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.25);transition:transform 0.3s;}
+.gal-img-old{width:100%;aspect-ratio:16/9;object-fit:cover;border:3px solid var(--primary-gold);border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.25);transition:transform 0.3s;}
+.gal-img-new:hover,.gal-img-old:hover{transform:scale(1.03);z-index:2;position:relative;box-shadow:0 6px 15px rgba(0,0,0,0.4);}
 
-/* CM172 - Footer Section */
-.footer-wrap{width:100%;background-color:var(--footer-bg);padding:30px 3% 10px;color:var(--text-light);font-family:'Roboto Slab',serif;}
-.footer-content{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;}
-.foot-col{flex:1;min-width:250px;display:flex;flex-direction:column;gap:10px;}
-.foot-title{font-size:1.1rem;font-weight:bold;color:var(--primary-gold);border-bottom:1px solid var(--primary-gold);padding-bottom:5px;margin-bottom:5px;}
-.foot-links a{color:var(--text-light);text-decoration:none;display:block;margin-bottom:6px;font-size:0.9rem;transition:color 0.2s;}
-.foot-links a:hover{color:var(--primary-gold);}
-.foot-map-container{width:100%;height:150px;border:2px solid var(--primary-gold);border-radius:6px;overflow:hidden;}
+/* CM173 - Footer Section */
+.footer-wrap{width:100%;background-color:var(--footer-bg);padding:40px 3% 15px;color:var(--text-light);font-family:'Roboto Slab',serif;border-top:4px solid var(--primary-gold);}
+.footer-content{max-width:1300px;margin:0 auto;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;}
+.foot-col{flex:1;min-width:260px;display:flex;flex-direction:column;gap:12px;}
+.foot-title{font-size:1.2rem;font-weight:bold;color:var(--primary-gold);border-bottom:2px solid var(--primary-gold);padding-bottom:8px;margin-bottom:8px;letter-spacing:0.5px;}
+.foot-links a{color:var(--text-light);text-decoration:none;display:flex;align-items:center;gap:6px;margin-bottom:8px;font-size:0.95rem;transition:color 0.2s,transform 0.2s;}
+.foot-links a:hover{color:var(--primary-gold);transform:translateX(5px);}
+.foot-map-container{width:100%;height:180px;border:3px solid var(--primary-gold);border-radius:8px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.4);}
 .foot-map-container iframe{width:100%;height:100%;border:0;}
-.map-actions{display:flex;justify-content:space-between;margin-top:5px;}
-.map-actions button{background:transparent;border:1px solid var(--primary-gold);color:var(--primary-gold);padding:4px 8px;border-radius:4px;cursor:pointer;font-size:0.75rem;display:flex;align-items:center;gap:4px;transition:0.2s;}
+.map-actions{display:flex;justify-content:space-between;margin-top:8px;}
+.map-actions button{background:transparent;border:1px solid var(--primary-gold);color:var(--primary-gold);padding:6px 12px;border-radius:4px;cursor:pointer;font-size:0.8rem;font-weight:bold;display:flex;align-items:center;gap:6px;transition:all 0.3s ease;}
 .map-actions button:hover{background:var(--primary-gold);color:var(--footer-bg);}
 .foot-social{display:flex;gap:15px;margin-top:10px;}
-.foot-social a{color:var(--primary-gold);font-size:1.5rem;transition:transform 0.2s;cursor:pointer;}
-.foot-social a:hover{transform:scale(1.2);}
-.foot-bottom{text-align:center;padding-top:20px;margin-top:20px;border-top:1px dashed #555;font-size:0.8rem;color:#aaa;display:flex;flex-direction:column;align-items:center;gap:10px;}
-.foot-logo{width:60px;height:60px;border-radius:50%;border:2px solid var(--primary-gold);margin-bottom:10px;}
-.admin-login-btn{background:var(--primary-gold);color:var(--footer-bg);padding:10px 25px;border-radius:25px;font-weight:bold;text-decoration:none;font-size:1.1rem;display:inline-flex;align-items:center;gap:8px;transition:0.3s;text-transform:uppercase;box-shadow:0 4px 10px rgba(255,200,0,0.3);}
-.admin-login-btn:hover{transform:scale(1.05);box-shadow:0 6px 15px rgba(255,200,0,0.5);}
+.foot-social a{color:var(--primary-gold);font-size:1.8rem;transition:transform 0.3s;cursor:pointer;}
+.foot-social a:hover{transform:scale(1.2) translateY(-3px);}
+.foot-bottom{text-align:center;padding-top:20px;margin-top:30px;border-top:1px dashed #555;font-size:0.85rem;color:#aaa;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.foot-logo{width:80px;height:80px;border-radius:50%;border:3px solid var(--primary-gold);margin-bottom:10px;background:#fff;padding:2px;}
 
-/* CM173 - Custom Toast Notification */
-.toast-msg{position:fixed;bottom:-60px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.85);color:var(--primary-gold);font-family:'Roboto Slab',serif;padding:12px 24px;border-radius:30px;font-size:0.95rem;font-weight:bold;border:1px solid var(--primary-gold);z-index:99999;transition:bottom 0.4s ease;box-shadow:0 4px 12px rgba(0,0,0,0.5);}
-.toast-msg.show{bottom:30px;}
-
-/* CM174 - Modal Styles */
-.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);display:none;justify-content:center;align-items:center;z-index:9999;backdrop-filter:blur(4px);}
-.modal-card{background:#FFF8EE;border:3px solid var(--primary-gold);border-radius:12px;width:90%;max-width:420px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,0.8);text-align:center;font-family:'Roboto Slab',serif;animation:modalPop 0.3s ease-out;}
-@keyframes modalPop{from{transform:scale(0.8);opacity:0;}to{transform:scale(1);opacity:1;}}
-.app-icon{width:80px;height:80px;border-radius:18px;margin:0 auto 12px;border:2px solid var(--primary-gold);box-shadow:0 4px 10px rgba(0,0,0,0.3);display:block;}
-.app-title{font-family:'Ponnala',sans-serif;font-size:1.3rem;font-weight:700;color:var(--top-bar-bg);margin-bottom:4px;}
-.app-sub{font-size:0.85rem;color:#555;margin-bottom:15px;}
-.progress-bar-container{width:100%;height:14px;background:#e0e0e0;border-radius:7px;overflow:hidden;margin:15px 0 8px;display:none;border:1px solid #ccc;}
-.progress-bar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--temple-maroon),var(--primary-gold));transition:width 0.2s linear;}
-.modal-btn-group{display:flex;gap:10px;justify-content:center;margin-top:15px;}
-.modal-btn{padding:8px 20px;border-radius:6px;font-weight:600;cursor:pointer;border:none;font-size:0.9rem;transition:all 0.2s ease;}
-.btn-install{background:linear-gradient(135deg,var(--temple-maroon),var(--temple-dark-red));color:#fff;border:1px solid var(--primary-gold);}
-.btn-install:hover{opacity:0.9;transform:translateY(-1px);}
-.btn-cancel{background:#ccc;color:#333;}
-.btn-cancel:hover{background:#bbb;}
+/* CM174 - Custom Toast Notification */
+.toast-msg{position:fixed;bottom:-60px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.9);color:var(--primary-gold);font-family:'Roboto Slab',serif;padding:12px 24px;border-radius:30px;font-size:0.95rem;font-weight:bold;border:2px solid var(--primary-gold);z-index:99999;transition:bottom 0.4s cubic-bezier(0.175,0.885,0.32,1.275);box-shadow:0 6px 15px rgba(0,0,0,0.6);}
+.toast-msg.show{bottom:40px;}
 </style>
 </head>
 <body>
 
 <!-- CM175 - Top Navigation Bar -->
 <div class="top-bar">
-<div class="top-left" onclick="openDownloadModal()"><i class="fas fa-download"></i> Download App</div>
-<div class="top-center"><i class="fas fa-globe"></i> www.svvsd.in</div>
+<div class="top-left" onclick="triggerAppInstall()"><i class="fas fa-download"></i> Download App</div>
+<div class="top-center"><i class="fas fa-globe"></i> www.vvd.org.in</div>
 <div class="top-right">
 <span><i class="fas fa-phone-alt"></i> Contact: 9703 719805</span>
 <span><i class="fas fa-envelope"></i> contact.svvsd@gmail.com</span>
+<a href="" id="topAdminLink" class="admin-badge-top"><i class="fas fa-user-shield"></i> Administrative Block</a>
 </div>
 </div>
 
@@ -306,7 +302,7 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 <div class="sec-three-img-box"><img id="secThreeCenterImg" src="" alt="Old Venkateshwara Swamy"></div>
 <div class="info-card">
 <div class="info-card-hdr"><i class="fas fa-bell"></i> Updates & Notifications</div>
-<div class="info-card-body" style="padding:10px 5px 10px 10px;">
+<div class="info-card-body">
 <ul class="update-list" id="updatesList">
 <li class="update-item"><div class="update-desc">Checking Live Updates... ⏳</div></li>
 </ul>
@@ -330,18 +326,22 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 <div class="sec-five">
 <div class="anna-text-box">
 <div class="anna-text" id="annaTextObj"></div>
-<div style="font-family:'Ponnala',sans-serif;font-size:1.1rem;color:var(--temple-dark-red);font-weight:bold;margin-top:4px;">దయచేసి మీరు కూడా అన్నదానం కొరకు బుక్ చేసుకోండి.</div>
-<a href="" id="bookNowBtn" class="btn-small-book">Book Now</a>
+<div style="font-family:'Ponnala',sans-serif;font-size:1.2rem;color:var(--temple-dark-red);font-weight:bold;margin-top:6px;text-shadow:0 1px 1px rgba(0,0,0,0.1);">అన్నదానం కొరకు ఇక్కడ బుక్ చేసుకోవచ్చు.</div>
+<a href="" id="bookNowBtn" class="btn-small-book"><i class="fas fa-utensils"></i> Book Now</a>
 </div>
 <div class="anna-grid">
 <div class="anna-card">
+<div class="anna-hdr-top">
 <div class="anna-title"><i class="fas fa-leaf"></i> ఉదయం అల్పాహారం</div>
 <div class="anna-cost">విరాళం: ₹30,000 (లేదా ఇద్దరు ₹15,000 చొప్పున)</div>
+</div>
 <ul class="cal-list" id="bfastList"></ul>
 </div>
 <div class="anna-card">
+<div class="anna-hdr-top">
 <div class="anna-title"><i class="fas fa-bowl-rice"></i> మధ్యాహ్న భోజనం</div>
 <div class="anna-cost">విరాళం: ₹20,000</div>
+</div>
 <ul class="cal-list" id="lunchList"></ul>
 </div>
 </div>
@@ -351,11 +351,9 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 <div class="donor-content-box">
 <div class="donor-bless-top">శ్రీ వాసాపురం వేంకటేశ్వర స్వామి మరియు మానస లింగేశ్వర స్వామి ఆశీస్సులు ఎల్లవేళలా వీరికి, వీరి కుటుంబ సభ్యులకు ఉండాలని కోరుకుంటున్నాము...</div>
 <div class="donor-split-new" id="donorCardsContainer">
-<!-- Dynamic Content Will Load Here via JS -->
 </div>
 </div>
 </div>
-
 </div>
 </div>
 
@@ -374,12 +372,11 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 </div>
 <div class="sec-seven">
 <div class="donate-left">
-<div class="sec-title">దేవస్థానం డొనేషన్ పోర్టల్</div>
+<div class="sec-title-small">దేవస్థానం డొనేషన్ పోర్టల్</div>
 <div class="qr-box">
-<div style="font-weight:bold;color:var(--temple-dark-red);margin-bottom:5px;">ఈ క్యూఆర్ కోడ్ ను స్కాన్ చేసి డొనేషన్ చేయవచ్చు</div>
+<div style="font-weight:bold;color:var(--temple-dark-red);font-size:1.1rem;margin-bottom:5px;">ఈ క్యూఆర్ కోడ్ ను స్కాన్ చేసి డొనేషన్ చేయవచ్చు</div>
 <img id="donationQrImg" src="" alt="QR Code" class="qr-img">
-<div style="font-weight:bold;color:var(--temple-maroon);font-family:'Roboto Slab',serif;">UPI ID: vasapuramtemple@upi</div>
-<div class="form-note">కౌంటర్లో రసీదు అడిగి తీసుకోవాల్సిందిగా కోరుచున్నాము.</div>
+<div class="form-note">దయచేసి పేమెంట్ చేసిన తర్వాత గుడికి వచ్చినప్పుడు ఆఫ్లైన్లో రసీదు తీసుకోగలరు.</div>
 </div>
 <div class="pay-modes">
 <strong>Payment Accepted:</strong>
@@ -391,12 +388,12 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 </div>
 </div>
 <div class="donate-right">
-<div class="sec-title">దాత వివరాలు</div>
-<div class="form-group"><label>Donor Full Name</label><input type="text" id="donorName" placeholder="Enter Full Name" oninput="formatName(this)"></div>
-<div class="form-group"><label>10 Digit Mobile Number</label><input type="text" id="donorMobile" placeholder="Enter Mobile Number" oninput="formatMobile(this)"></div>
+<div class="sec-title-small">దాత వివరాలు</div>
+<div class="form-group"><label>Donor Full Name <span style="color:red;">*</span></label><input type="text" id="donorName" placeholder="Enter Full Name" required oninput="formatName(this)"></div>
+<div class="form-group"><label>10 Digit Mobile Number <span style="color:red;">*</span></label><input type="text" id="donorMobile" placeholder="Enter Mobile Number" required oninput="formatMobile(this)"></div>
 <div class="form-group">
-<label>-- Select Purpose --</label>
-<select id="donatePurpose" onchange="updateAmount()">
+<label>-- Select Purpose -- <span style="color:red;">*</span></label>
+<select id="donatePurpose" required onchange="updateAmount()">
 <option value="annadanam">Annadanam</option>
 <option value="renovation">Temple Renovation (Kalyana Mandapam)</option>
 <option value="vivaha_kattadi">Vivaha Kattadi (₹10,116)</option>
@@ -405,9 +402,9 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 <option value="other">Other Amount</option>
 </select>
 </div>
-<div class="form-group"><label>Donation Amount (₹)</label><input type="number" id="donateAmount" placeholder="Enter Amount"></div>
-<div class="form-group"><label>UPI Transaction ID (Optional)</label><input type="text" id="donateUtr" placeholder="Enter UTR Number"></div>
-<button class="btn-submit" onclick="submitDonationForm()">Submit Details</button>
+<div class="form-group"><label>Donation Amount (₹) <span style="color:red;">*</span></label><input type="number" id="donateAmount" placeholder="Enter Amount" required></div>
+<div class="form-group"><label>UPI Transaction ID (Required) <span style="color:red;">*</span></label><input type="text" id="donateUtr" placeholder="Enter UTR Number" required></div>
+<button class="btn-submit" onclick="submitDonationForm()"><i class="fas fa-paper-plane"></i> Submit Details</button>
 <div class="form-note" id="formMessage"></div>
 </div>
 </div>
@@ -435,9 +432,9 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 <div class="footer-content">
 <div class="foot-col" style="align-items:center;text-align:center;">
 <img id="footLogoImg" src="" alt="Logo" class="foot-logo">
-<div style="color:var(--primary-gold);font-weight:bold;margin-bottom:10px;">Sri Venkateswara Swamy Devasthanam</div>
+<div style="color:var(--primary-gold);font-weight:bold;margin-bottom:10px;font-size:1.1rem;">Sri Venkateswara Swamy<br>Devasthanam</div>
 <div class="foot-social">
-<a onclick="showToast('We will update it soon')"><i class="fab fa-facebook"></i></a>
+<a onclick="showToast('We will update it soon')"><i class="fab fa-facebook-circle"></i></a>
 <a onclick="showToast('We will update it soon')"><i class="fab fa-youtube"></i></a>
 <a onclick="showToast('We will update it soon')"><i class="fab fa-instagram"></i></a>
 <a onclick="showToast('We will update it soon')"><i class="fab fa-whatsapp"></i></a>
@@ -446,17 +443,19 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 <div class="foot-col">
 <div class="foot-title">Quick Links</div>
 <div class="foot-links">
-<a id="footHistLink" href=""><i class="fas fa-angle-right"></i> Full History</a>
-<a id="footAnnaLink" href=""><i class="fas fa-angle-right"></i> Annadanam</a>
-<a href="#sec-donation"><i class="fas fa-angle-right"></i> Register / Donate</a>
+<a id="footHistLink" href=""><i class="fas fa-chevron-right"></i> Full History</a>
+<a id="footAnnaLink" href=""><i class="fas fa-chevron-right"></i> Annadanam</a>
+<a href="#sec-donation"><i class="fas fa-chevron-right"></i> Register / Donate</a>
+<a id="footAdminLinkBot" href=""><i class="fas fa-chevron-right"></i> Administrative Login</a>
 </div>
 </div>
 <div class="foot-col">
 <div class="foot-title">Contact Us</div>
-<div class="foot-links">
-<a href="tel:9703719805"><i class="fas fa-phone-alt"></i> 9703 719805</a>
-<a href="mailto:contact.svvsd@gmail.com"><i class="fas fa-envelope"></i> contact.svvsd@gmail.com</a>
-<div style="margin-top:10px;font-size:0.85rem;line-height:1.4;">Vasapuram Village, Rudravaram Mandal, Nandyal District, AP - 518542</div>
+<div class="foot-links" style="display:block;">
+<a href="tel:9703719805" style="margin-bottom:10px;"><i class="fas fa-phone-alt"></i> 9703 719805</a>
+<a href="mailto:contact.svvsd@gmail.com" style="margin-bottom:5px;"><i class="fas fa-envelope"></i> contact.svvsd@gmail.com</a>
+<div style="color:var(--primary-gold);font-size:0.85rem;margin-bottom:10px;padding-left:22px;">(Administrative Block)</div>
+<div style="margin-top:10px;font-size:0.9rem;line-height:1.5;color:#eee;">Vasapuram Village, Rudravaram Mandal,<br>Nandyal District, AP - 518542</div>
 </div>
 </div>
 <div class="foot-col">
@@ -470,62 +469,46 @@ body{font-family:'Ponnala',sans-serif;background-color:var(--text-light);overflo
 </div>
 </div>
 <div class="foot-bottom">
-<a id="footAdminLink" href="" class="admin-login-btn"><i class="fas fa-user-shield"></i> Admin Login</a>
-<div style="margin-top:15px;">&copy; 2026 Sri Venkateswara Swamy Devasthanam. All rights reserved.</div>
+<div>&copy; 2026 Sri Venkateswara Swamy Devasthanam. All rights reserved.</div>
 </div>
 </div>
 
-<!-- CM187 - Custom Toast & App Download Modal -->
+<!-- CM187 - Custom Toast Notification -->
 <div id="customToast" class="toast-msg">We will update it soon</div>
 
-<div class="modal-overlay" id="downloadModal">
-<div class="modal-card">
-<img id="modalIconImg" src="" alt="App Icon" class="app-icon">
-<div class="app-title">SVVSD Temple Official App</div>
-<div class="app-sub">Version 2.1 • Add to Home Screen</div>
-<div id="installStatus" style="font-size:0.95rem;color:#333;margin-top:10px;">మీరు SVVSD టెంపుల్ యాప్‌ను ఇన్‌స్టాల్ చేయాలనుకుంటున్నారా?</div>
-<div class="progress-bar-container" id="progressContainer"><div class="progress-bar-fill" id="progressFill"></div></div>
-<div class="modal-btn-group">
-<button class="modal-btn btn-install" id="installBtn" onclick="startInstallation()">ఇన్‌స్టాల్ చేయి (Install)</button>
-<button class="modal-btn btn-cancel" id="cancelBtn" onclick="closeDownloadModal()">రద్దు చేయి</button>
-</div>
-</div>
-</div>
-
 <script>
-/* CM188 - Toast & Modal Interaction Functions */
-function showToast(msg){let t=document.getElementById('customToast');t.innerText=msg;t.classList.add('show');setTimeout(()=>{t.classList.remove('show');},3000);}
-function openDownloadModal(){document.getElementById('downloadModal').style.display='flex';document.getElementById('progressContainer').style.display='none';document.getElementById('progressFill').style.width='0%';document.getElementById('installStatus').innerText='మీరు SVVSD టెంపుల్ యాప్‌ను ఇన్‌స్టాల్ చేయాలనుకుంటున్నారా?';document.getElementById('installBtn').style.display='inline-block';document.getElementById('cancelBtn').innerText='రద్దు చేయి';document.getElementById('cancelBtn').onclick=closeDownloadModal;}
-function closeDownloadModal(){document.getElementById('downloadModal').style.display='none';}
-function startInstallation(){document.getElementById('progressContainer').style.display='block';document.getElementById('installBtn').style.display='none';let p=0;let btn=document.getElementById('cancelBtn');let interval=setInterval(()=>{p+=10;document.getElementById('progressFill').style.width=p+'%';if(p<50){document.getElementById('installStatus').innerText='డౌన్‌లోడ్ అవుతోంది... ('+p+'%)';}else if(p<100){document.getElementById('installStatus').innerText='ఇన్‌స్టాల్ అవుతోంది... ('+p+'%)';}else{clearInterval(interval);document.getElementById('installStatus').innerText='యాప్ విజయవంతంగా ఇన్‌స్టాల్ అయింది!';btn.innerText='పూర్తయింది';btn.onclick=closeDownloadModal;}},250);}
+/* CM188 - Native App Install Prompt & Toast */
+let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; });
+function triggerAppInstall() { if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then((choiceResult) => { if (choiceResult.outcome === 'accepted') { console.log('User accepted the install prompt'); } deferredPrompt = null; }); } else { showToast("Your browser doesn't support direct install or it's already installed. Try 'Add to Home Screen' in menu."); } }
+function showToast(msg){let t=document.getElementById('customToast');t.innerText=msg;t.classList.add('show');setTimeout(()=>{t.classList.remove('show');},3500);}
 
 /* CM189 - Form Validation and Calculations */
 function formatName(input){input.value=input.value.toLowerCase().split(' ').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ');}
 function formatMobile(input){input.value=input.value.replace(/\D/g,'').slice(0,10);}
 function updateAmount(){let sel=document.getElementById('donatePurpose').value;let amtInp=document.getElementById('donateAmount');if(sel==='vivaha_kattadi')amtInp.value=10116;else if(sel==='saswatha_pooja')amtInp.value=25116;else if(sel==='nitya_pooja')amtInp.value=5116;else amtInp.value='';}
-function submitDonationForm(){let n=document.getElementById('donorName').value;let m=document.getElementById('donorMobile').value;let p=document.getElementById('donatePurpose').value;let a=document.getElementById('donateAmount').value;let u=document.getElementById('donateUtr').value;let msg=document.getElementById('formMessage');if(!n||m.length!==10||!a){msg.innerText="దయచేసి పేరు, 10 అంకెల మొబైల్ నంబర్ మరియు అమౌంట్ ఎంటర్ చేయండి.";msg.style.color="#d32f2f";return;}let b=document.querySelector('.btn-submit');let ot=b.innerText;b.innerText='సమర్పిస్తున్నాము... (Submitting...)';b.disabled=true;msg.innerText="దయచేసి వేచి ఉండండి, డేటా ప్రాసెస్ అవుతోంది...";msg.style.color="#b8860b";let payload={action:'submitDonation',donorName:n,mobileNumber:m,purpose:p,amount:a,upiId:u};fetch(appLinks.gasUrl,{method:'POST',body:JSON.stringify(payload)}).then(()=>{msg.innerText="వివరాలు విజయవంతంగా షీట్ లో నమోదు చేయబడ్డాయి! ధన్యవాదాలు.";msg.style.color="green";document.getElementById('donorName').value='';document.getElementById('donorMobile').value='';document.getElementById('donateAmount').value='';document.getElementById('donateUtr').value='';}).catch(()=>{msg.innerText="రిక్వెస్ట్ పంపబడింది. (నెట్వర్క్ ఇబ్బంది ఉంటే ఆఫీసులో సంప్రదించండి)";msg.style.color="green";}).finally(()=>{b.innerText=ot;b.disabled=false;});}
+function submitDonationForm(){let n=document.getElementById('donorName').value;let m=document.getElementById('donorMobile').value;let p=document.getElementById('donatePurpose').value;let a=document.getElementById('donateAmount').value;let u=document.getElementById('donateUtr').value;let msg=document.getElementById('formMessage');if(!n||m.length!==10||!a||!u){msg.innerText="దయచేసి పేరు, 10 అంకెల మొబైల్ నంబర్, అమౌంట్ మరియు UTR నంబర్ తప్పనిసరిగా ఎంటర్ చేయండి.";msg.style.color="#d32f2f";return;}let b=document.querySelector('.btn-submit');let ot=b.innerHTML;b.innerHTML='<i class="fas fa-spinner fa-spin"></i> సమర్పిస్తున్నాము...';b.disabled=true;msg.innerText="దయచేసి వేచి ఉండండి, డేటా ప్రాసెస్ అవుతోంది...";msg.style.color="#b8860b";let payload={action:'submitDonation',donorName:n,mobileNumber:m,purpose:p,amount:a,upiId:u};fetch(appLinks.gasUrl,{method:'POST',body:JSON.stringify(payload)}).then(()=>{msg.innerText="వివరాలు విజయవంతంగా షీట్ లో నమోదు చేయబడ్డాయి! ధన్యవాదాలు.";msg.style.color="green";document.getElementById('donorName').value='';document.getElementById('donorMobile').value='';document.getElementById('donateAmount').value='';document.getElementById('donateUtr').value='';}).catch(()=>{msg.innerText="రిక్వెస్ట్ పంపబడింది. (నెట్వర్క్ ఇబ్బంది ఉంటే ఆఫీసులో సంప్రదించండి)";msg.style.color="green";}).finally(()=>{b.innerHTML=ot;b.disabled=false;});}
 
-/* CM190 - Master Link Configuration (All Links & Images Here) */
+/* CM190 - Master Link Configuration (Strictly New Cloudflare Links) */
 const appLinks={
     gasUrl:"https://script.google.com/macros/s/AKfycbxz7lgG3kDsceI4ZvPQJYCsHbg871ACmERMlgXeq0huDIQjnesKUgZ4hgP3zlTjloa1/exec",
     historyPage:"https://svvsdr.github.io/WEB-V1.0/history.html",
     annadanamPage:"https://svvsdr.github.io/WEB-V1.0/annadanampage.html",
     adminPage:"https://svvsdr.github.io/WEB-V1.0/adminlogin.html",
-    mainLogo:"https://svvsdr.github.io/SVVDS-IMG/7-FEVICON-AND-MAIN-LOGO-ICON.png",
-    qrCode:"https://svvsdr.github.io/SVVDS-IMG/WEBSITE-QR.png",
+    mainLogo:"https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/main-vvd-logo-fevicon-icon-both.png",
+    qrCode:"https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/payment-qr-code.png",
     mapEmbedUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15444.646949363066!2d78.6015!3d15.228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDEzJzQwLjgiTiA3OMKwMzYnMDYuMCJF!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin",
-    deities:{lakshmi:"https://svvsdr.github.io/SVVDS-IMG/1.2-LAKSHIMDEVI.jpg",venkateswara:"https://svvsdr.github.io/SVVDS-IMG/1-VENKATESWARA-SWAMY-MAIN.jpeg",goda:"https://svvsdr.github.io/SVVDS-IMG/3-GODADEVI-AMMAVARU.jpeg",shiva:"https://svvsdr.github.io/SVVDS-IMG/2-SIVALINGAM.jpeg",oldSwamy:"https://svvsdr.github.io/SVVDS-IMG/6-OLD-VENKATESWARA-SWAMY.jpeg"},
-    galleryNew:["https://svvsdr.github.io/SVVDS-IMG/1-VENKATESWARA-SWAMY-MAIN.jpeg","https://svvsdr.github.io/SVVDS-IMG/1.2-LAKSHIMDEVI.jpg","https://svvsdr.github.io/SVVDS-IMG/2-SIVALINGAM.jpeg","https://svvsdr.github.io/SVVDS-IMG/3-GODADEVI-AMMAVARU.jpeg"],
-    galleryOld:["https://svvsdr.github.io/SVVDS-IMG/4-OLD-SIVALNGAM.jpeg","https://svvsdr.github.io/SVVDS-IMG/5-OLD-STACHUES.jpeg","https://svvsdr.github.io/SVVDS-IMG/6-OLD-VENKATESWARA-SWAMY.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%282%29.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%283%29.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%284%29.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%285%29.jpeg","https://svvsdr.github.io/SVVDS-IMG/OLD-SWAMY%286%29.jpeg"]
+    deities:{lakshmi:"https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/1.2-swamy-rightside-padmavati-ammavaru.jpeg",venkateswara:"https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/1-venkateswara-swamy.jpeg",goda:"https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/1.3-swamy-leftside-godadevi-ammavaru.jpeg",shiva:"https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/2-sivayya.jpeg",oldSwamy:"https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/6-OLD-VENKATESWARA-SWAMY.jpeg"},
+    galleryNew:["https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/1-venkateswara-swamy.jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/1.2-swamy-rightside-padmavati-ammavaru.jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/1.3-swamy-leftside-godadevi-ammavaru.jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/2-sivayya.jpeg"],
+    galleryOld:["https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/4-OLD-SIVALINGAM.jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/5-OLD-STACHUES.jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/6-OLD-VENKATESWARA-SWAMY.jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/7-OLD-SWAMY(2).jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/8-OLD-SWAMY(3).jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/9-OLD-SWAMY(4).jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/10-OLD-SWAMY(5).jpeg","https://pub-d9798f653bfc47c5997326bb83a81672.r2.dev/11-OLD-SWAMY(6).jpeg"]
 };
 
 /* CM191 - Master Content and Data Configuration */
 const appConfig={
     content:{
-        topText:`నంద్యాల జిల్లా, రుద్రవరం సమీపంలోని వాసాపురంలో వెలసిన శ్రీ వేంకటేశ్వర స్వామి దేవాలయం ఒక అద్భుతమైన ఆధ్యాత్మిక కేంద్రంగా విలసిల్లుతోంది. సాధారణంగా అర్ధ నిమీలిత నేత్రాలతో ఉండే మూలవిరాట్టులకు భిన్నంగా,`,
-        leftText:`ఇక్కడ స్వామివారి కళ్ళు పూర్తిగా తెరుచుకుని "జాగ్రదావస్థ"లో ఉండటం ప్రధాన ఆకర్షణ. ఇది స్వామివారు తమ కష్టాలను కళ్లారా చూసి తీరుస్తారనే భరోసాను భక్తులకు కల్పిస్తోంది.`,
-        rightText:`ఒకే ప్రాంగణంలో వైష్ణవ, శైవ ఆలయాలు ఉండటం ఇక్కడి హరి-హర అభేద తత్వానికి సజీవ నిదర్శనం. సోషల్ మీడియా ద్వారా ఈ "కళ్ళు తెరిచిన వేంకటేశ్వర స్వామి" ఖ్యాతి విశేషంగా వ్యాపించి,`,
-        botText:`తెలుగు రాష్ట్రాల నలుమూలల నుండి భక్తులను ఆకర్షిస్తోంది. అహోబిలం పారువేట ఉత్సవాలతో ఈ ప్రాంతానికి ఉన్న చారిత్రక అనుబంధానికి ఈ క్షేత్రం మరింత వన్నె తెచ్చింది. భక్తుల రద్దీ పెరగడంతో గ్రామీణ ఆర్థిక వ్యవస్థ, రవాణా, మరియు ఉపాధి అవకాశాలు మెరుగుపడి నంద్యాల పర్యాటక సర్క్యూట్‌లో ఈ ఆలయం ఒక కీలక పుణ్యక్షేత్రంగా మారింది.`,
+        topText:`నంద్యాల జిల్లా, రుద్రవరం సమీపంలోని వాసాపురంలో వెలసిన శ్రీ వేంకటేశ్వర స్వామి దేవాలయం ఒక అద్భుతమైన ఆధ్యాత్మిక కేంద్రంగా విలసిల్లుతోంది.`,
+        leftText:`ఇక్కడ స్వామివారిని దర్శించుకోవడం ద్వారా ఎంతో ప్రశాంతత లభిస్తుంది. ఒకే ప్రాంగణంలో వైష్ణవ, శైవ ఆలయాలు ఉండటం ఇక్కడి హరి-హర అభేద తత్వానికి సజీవ నిదర్శనం.`,
+        rightText:`తెలుగు రాష్ట్రాల నలుమూలల నుండి భక్తులు స్వామివారి ఆశీస్సులు పొందడానికి విశేషంగా తరలివస్తుంటారు.`,
+        botText:`అహోబిలం పారువేట ఉత్సవాలతో ఈ ప్రాంతానికి ఉన్న చారిత్రక అనుబంధానికి ఈ క్షేత్రం మరింత వన్నె తెచ్చింది. భక్తుల రద్దీ పెరగడంతో గ్రామీణ ఆర్థిక వ్యవస్థ, రవాణా, మరియు ఉపాధి అవకాశాలు మెరుగుపడి నంద్యాల పర్యాటక సర్క్యూట్‌లో ఈ ఆలయం ఒక కీలక పుణ్యక్షేత్రంగా మారింది.`,
         annadanam:`ప్రతి శనివారం ఇచ్చట వైభవంగా భక్తులకి అల్పాహారం మరియు భోజన అన్నదాన కార్యక్రమాలు జరుగుతూ ఉన్నాయి. భక్తులు తమ కోరికలు నెరవేరిన తర్వాత లేదా నెరవేరడానికి భక్తితో అన్న ప్రసాదం కొరకు విరాళాలు ఇచ్చి అన్నదాన కార్యక్రమాలు వాళ్ళ పేరు మీద రిజిస్టర్ చేసుకుంటున్నారు.`
     },
     profiles:{
@@ -534,25 +517,25 @@ const appConfig={
     },
     festivals:[
         {title:"ప్రతి వారం జరిగే పూజలు",desc:"వారపు ప్రత్యేక కార్యక్రమాలు:",sched:["శుక్రవారం: స్వామి అభిషేకం మరియు అలంకరణ","శనివారం: కుంకుమార్చన (ఉదయం 7:30 నుంచి రాత్రి 8:30 వరకు)"]},
+        {title:"మహాశివరాత్రి (మాఘ మాసం)",desc:"శివరాత్రి జాగరణ మరియు కల్యాణ మహోత్సవం:",sched:["అర్ధరాత్రి లింగోద్భవ సమయంలో: మహాభిషేకం","మహా త్రిపుర సుందరీ దేవి సమేత మానస లింగేశ్వర స్వామి వారి కళ్యాణం","పల్లకి సేవ ఉత్సవం"]},
+        {title:"వైశాఖ ఉత్సవాలు (వైశాఖ మాసం)",desc:"వార్షికోత్సవ వేడుకలు:",sched:["వైశాఖ షష్ఠి: శివాలయం వార్షికోత్సవం మరియు ప్రత్యేక పూజలు","వైశాఖ సప్తమి: శ్రీ వెంకటేశ్వర స్వామి వారి వార్షిక కార్యక్రమాలు"]},
+        {title:"కార్తీక పౌర్ణమి (కార్తీక మాసం)",desc:"కార్తీక మాస ప్రత్యేక కార్యక్రమాలు:",sched:["ఉదయం నుండి సామూహిక హోమాలు","సాయంత్రం వేళ: కోటి దీపోత్సవం","స్వామివారి రథోత్సవం"]},
         {title:"వైకుంఠ ఏకాదశి (ముక్కోటి ఏకాదశి)",desc:"ఉత్తర వైకుంఠ ద్వార దర్శనం మరియు ప్రత్యేక ఉత్సవాలు:",sched:["ఉదయం 12:05: స్వామివారికి అభిషేకం","ఉదయం 2:00: ప్రత్యేక అలంకరణ","ఉదయం 3:00 నుండి రాత్రి 8:00 వరకు: ఉత్తర వైకుంఠ ద్వార దర్శనం","ఉదయం 10:00: శ్రీ లక్ష్మీదేవి గోదాదేవి సమేత వాసాపురం వెంకటేశ్వర స్వామి కళ్యాణం","సాయంత్రం 4:00: పల్లకి సేవ మరియు రథోత్సవం"]},
-        {title:"కార్తీక పౌర్ణమి",desc:"కార్తీక మాస ప్రత్యేక కార్యక్రమాలు:",sched:["ఉదయం నుండి సామూహిక హోమాలు","సాయంత్రం వేళ: కోటి దీపోత్సవం","స్వామివారి రథోత్సవం"]},
-        {title:"మహాశివరాత్రి",desc:"శివరాత్రి జాగరణ మరియు కల్యాణ మహోత్సవం:",sched:["అర్ధరాత్రి లింగోద్భవ సమయంలో: మహాభిషేకం","మహా త్రిపుర సుందరీ దేవి సమేత మానస లింగేశ్వర స్వామి వారి కళ్యాణం","పల్లకి సేవ ఉత్సవం"]},
-        {title:"వైశాఖ ఉత్సవాలు",desc:"వార్షికోత్సవ వేడుకలు:",sched:["వైశాఖ షష్ఠి: శివాలయం వార్షికోత్సవం మరియు ప్రత్యేక పూజలు","వైశాఖ సప్తమి: శ్రీ వెంకటేశ్వర స్వామి వారి వార్షిక కార్యక్రమాలు"]},
         {title:"పూజా మరియు డొనేషన్ వివరాలు",desc:"ఆలయ అభివృద్ధి మరియు పూజలకై మీ విరాళాలు:",sched:["నిత్య పూజ (₹5,116): సంవత్సరంలో ఒక్కసారి మీ పేరున స్వామివారికి అభిషేకం.","వివాహ కట్టడి (₹10,116): కళ్యాణ అవసరాల నిమిత్తం.","శాశ్వత పూజ (₹25,116): ప్రతి సంవత్సరం ఒక రోజు మీ పేరున శాశ్వత అభిషేకం మరియు పూజలు."]}
     ]
 };
 
 /* CM192 - Initialization & Inject Links */
 function injectLinks(){
-    document.getElementById('headImg1').src=appLinks.deities.lakshmi;document.getElementById('headImg2').src=appLinks.deities.venkateswara;document.getElementById('headImg3').src=appLinks.deities.goda;document.getElementById('headImg4').src=appLinks.deities.shiva;document.getElementById('histCenterLogo').src=appLinks.mainLogo;document.getElementById('secThreeCenterImg').src=appLinks.deities.oldSwamy;document.getElementById('donationQrImg').src=appLinks.qrCode;document.getElementById('footLogoImg').src=appLinks.mainLogo;document.getElementById('modalIconImg').src=appLinks.mainLogo;document.getElementById('mapIframe').src=appLinks.mapEmbedUrl;
-    document.getElementById('readMoreBtn').href=appLinks.historyPage;document.getElementById('footHistLink').href=appLinks.historyPage;document.getElementById('bookNowBtn').href=appLinks.annadanamPage;document.getElementById('footAnnaLink').href=appLinks.annadanamPage;document.getElementById('footAdminLink').href=appLinks.adminPage;
+    document.getElementById('headImg1').src=appLinks.deities.lakshmi;document.getElementById('headImg2').src=appLinks.deities.venkateswara;document.getElementById('headImg3').src=appLinks.deities.goda;document.getElementById('headImg4').src=appLinks.deities.shiva;document.getElementById('histCenterLogo').src=appLinks.mainLogo;document.getElementById('secThreeCenterImg').src=appLinks.deities.oldSwamy;document.getElementById('donationQrImg').src=appLinks.qrCode;document.getElementById('footLogoImg').src=appLinks.mainLogo;document.getElementById('mapIframe').src=appLinks.mapEmbedUrl;
+    document.getElementById('readMoreBtn').href=appLinks.historyPage;document.getElementById('footHistLink').href=appLinks.historyPage;document.getElementById('bookNowBtn').href=appLinks.annadanamPage;document.getElementById('footAnnaLink').href=appLinks.annadanamPage;document.getElementById('topAdminLink').href=appLinks.adminPage;document.getElementById('footAdminLinkBot').href=appLinks.adminPage;
 }
 function applyContent(){
     document.getElementById('histTopText').innerText=appConfig.content.topText;document.getElementById('histLeftText').innerText=appConfig.content.leftText;document.getElementById('histRightText').innerText=appConfig.content.rightText;document.getElementById('histBotText').innerText=appConfig.content.botText;document.getElementById('annaTextObj').innerText=appConfig.content.annadanam;
     let comHtml='';appConfig.profiles.committee.forEach(p=>{let ph=p.phone?`<div class="profile-phone"><i class="fas fa-phone-alt"></i> ${p.phone}</div>`:'';comHtml+=`<div class="profile-card"><img src="${appLinks.mainLogo}" class="profile-img" alt="${p.name}"><div class="profile-name">${p.name}</div><div class="profile-role"><i class="${p.icon}"></i> ${p.role}</div>${ph}</div>`;});document.getElementById('committeeGrid').innerHTML=comHtml;
     let priHtml='';appConfig.profiles.priests.forEach(p=>{let ph=p.phone?`<div class="profile-phone"><i class="fas fa-phone-alt"></i> ${p.phone}</div>`:'';priHtml+=`<div class="profile-card"><img src="${appLinks.mainLogo}" class="profile-img" alt="${p.name}"><div class="profile-name">${p.name}</div><div class="profile-role"><i class="${p.icon}"></i> ${p.role}</div>${ph}</div>`;});document.getElementById('priestsGrid').innerHTML=priHtml;
     let festHtml='';appConfig.festivals.forEach(f=>{let schedHtml='';if(f.sched.length>0){schedHtml='<ul class="fest-sched">'+f.sched.map(s=>`<li>${s}</li>`).join('')+'</ul>';}festHtml+=`<div class="fest-card"><div class="fest-title">${f.title}</div><div class="fest-desc">${f.desc}</div>${schedHtml}</div>`;});document.getElementById('festivalGrid').innerHTML=festHtml;
-    document.getElementById('newGalleryGrid').innerHTML=appLinks.galleryNew.map(url=>`<img src="${url}" class="gal-img-new" alt="New Temple Photo">`).join('');document.getElementById('oldGalleryGrid').innerHTML=appLinks.galleryOld.map(url=>`<img src="${url}" class="gal-img-old" alt="Old Temple Photo">`).join('');
+    document.getElementById('newGalleryGrid').innerHTML=appLinks.galleryNew.map(url=>`<img src="${url}" class="gal-img-new" alt="New Temple Photo" loading="lazy">`).join('');document.getElementById('oldGalleryGrid').innerHTML=appLinks.galleryOld.map(url=>`<img src="${url}" class="gal-img-old" alt="Old Temple Photo" loading="lazy">`).join('');
 }
 
 /* CM193 - Fetch Live Data (Updates, Calendar, Donors) */
